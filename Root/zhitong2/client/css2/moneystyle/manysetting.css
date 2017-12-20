@@ -1,0 +1,110 @@
+body{
+	overflow-x: hidden;
+}
+
+.fontwhite{
+	color:#fff!important;
+}
+.money1head{
+	font-size: 30px;
+}
+
+
+.moneysum{
+	margin-top: 30px;
+}
+.moneysum select{
+	height:27px;
+	text-align: center;
+	line-height: 27px;
+}
+.moneysum p{
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 600;
+	word-spacing: 5px;
+	padding-bottom: 100px;
+}
+
+
+
+.save{
+	position: absolute;
+	bottom: 0;
+	left:50%;
+	margin-left:-70px;
+	margin-top:100px;
+	width:140px;
+	height:40px;
+	border-radius:5px;
+	text-align: center;
+	line-height: 40px;
+}
+
+.mood{
+	display: none;
+	z-index: 1;
+	position: fixed;
+	width:100%;
+	height:100%;
+	background-color: rgba(204, 204, 204,0.6);
+}
+
+.moodbox{
+	text-align: center;
+	z-index: 1000;
+	color: #000;
+	position: absolute;
+	left:50%;
+	top:20%;
+	margin-left:-125px;
+	margin-top:-70px;
+	width:355px;
+	height:140px;
+	-border:1px solid #000;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.moodbox div{
+	width:100%;
+	height:100%;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.moodbox p{
+	margin: 0;
+	margin-left: 10%;
+	width:79%;
+	font-size: 20px;
+	text-align: center;
+	float: left;
+}
+
+.moodbox span{
+	cursor: pointer;
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 700;
+	text-align: right;
+	line-height: 20px;
+	width:10%;
+	height:20px;
+	text-align: center;
+	line-height: 20px;
+	float: right;
+}
+
+#msetadd,#msetbjV{
+	width:80%;
+	text-align: center;
+	margin-top:10px;
+}
+
+.tipbtn{
+	display: inline-block;
+	margin-top: 20px;
+	width:20%;
+	height:30px;
+}
+
+

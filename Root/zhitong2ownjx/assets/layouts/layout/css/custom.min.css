@@ -1,0 +1,155 @@
+.page-header.navbar {
+    height: 60px;
+    min-height: 60px;
+}
+
+.page-header.navbar .page-logo {
+    height: 60px;
+}
+
+.page-header.navbar .menu-toggler.sidebar-toggler {
+    float: right;
+    margin: 20px 0 0;
+}
+
+.page-header.navbar .top-menu .navbar-nav {
+    margin-right: 50px;
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.dropdown {
+    height: 60px;
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle {
+    padding: 20px 6px 13px 8px;
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle > img {
+    height: 30px;
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle > .username {
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.kindergarten-switch {
+    margin-right: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-menu > li > a {
+    text-align: center;
+}
+
+.page-header-fixed .page-container {
+    margin-top: 60px;
+}
+
+.page-custom-title {
+    width: 252px;
+    line-height: 60px;
+    font-size: 28px;
+    font-weight: 500;
+    margin-left: 10px;
+    color: #ffffff;
+    float: left;
+}
+
+.page-content-white .page-title {
+    margin: 0 0 25px;
+    font-size: 24px;
+}
+
+.page-container-bg-solid .page-title, .page-content-white .page-title {
+    margin-top: 0;
+}
+
+.page-footer {
+    margin-bottom: 0;
+}
+
+.table-center th, .table-center td {
+    text-align: center;
+}
+
+.table-center > tbody > tr > td, .table-center > tbody > tr > th {
+    vertical-align: middle;
+}
+
+.div-p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.nav-custom > li {
+    border: none;
+    margin: 0px;
+    float: left;
+}
+
+.tabbable-line > .nav-custom > li.active {
+    background: none;
+    position: relative;
+}
+
+.tabbable-line > .nav-custom > li.active > a {
+    border: 0;
+    color: #3598dc;
+}
+
+.tabbable-line > .nav-custom > li > a {
+    background: none !important;
+    border: 0;
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #737373;
+    font-weight: 700;
+    text-align: center;
+}
+
+.margin-left-10 {
+    margin-left: 10px;
+}
+
+.sweet-alert {
+    z-index: 20000;
+}
+
+label.error {
+    color: #e7505a;
+}
+
+.select2-container--bootstrap .select2-results__group {
+    font-size: 14px;
+}
+
+.z_file {
+    width: 100px;
+    height: 100px;
+    background: url("../img/z_add.png") no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    margin-right: 10px;
+}
+.page-header.navbar.navbar-fixed-top, .page-header.navbar.navbar-static-top {
+    z-index: 1;
+}
+
+.file-input .btn-file{
+    width:100px;
+}
+
+/*.page-sidebar .page-sidebar-menu>li.active.open>a, .page-sidebar .page-sidebar-menu>li.active>a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.active.open>a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.active>a{
+    background-color: #00418f;
+}
+.page-sidebar .page-sidebar-menu>li.active.open>a:hover, .page-sidebar .page-sidebar-menu>li.active>a:hover, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.active.open>a:hover, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.active>a:hover {
+    background: #00418f;
+}*/

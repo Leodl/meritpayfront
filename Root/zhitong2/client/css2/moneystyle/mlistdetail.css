@@ -1,0 +1,232 @@
+p{
+	margin: 0;
+}
+.fontwhite{
+	color:#fff!important;
+}
+
+.money1head{
+	font-size: 30px;
+}
+.listcolor{
+	background-color: rgba(0, 153, 255, 1);
+}
+
+.blackline{
+	width: 100%;
+	height: 1px;
+	border-bottom: 1px solid #333;
+	margin-top: 200px;
+}
+
+
+.sall{
+	float: right;
+	width: 270px;
+	height: 100px;
+	line-height: 50px;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.sall>div{
+	width: 100%;
+	height: 50%;
+}
+
+.sall>div div{
+	display: inline-block;
+	width: 30%;
+	margin-right: 10px;
+}
+
+.sall>div span{
+	margin-right: 5px;
+}
+
+/* 小弹窗  */
+.relabox{
+	position: relative;
+}
+
+.circletip{
+	position: absolute;
+	right:10%;
+	top:10%;
+	width: 25px;
+	height: 25px;
+	border:1px solid #ccc;
+	border-radius: 50%;
+	cursor: pointer;1
+}
+
+.ctipbox{
+	display: none;
+	position: absolute;
+	top: 100px;
+	width:326px;
+	height: 200px;
+	color: #000;
+	border: 1px solid #000;
+	background: #fff;
+}
+
+.ctipbox .ctipdele{
+	display: block;
+	float: right;
+	text-align: center;
+	line-height: 30px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.ctipbox p{
+	margin: 0;
+	margin-left: 10px;
+	text-align: left;
+}
+
+.ctipbox p:nth-child(2){
+	margin-top: 35px;	
+}
+
+/*此页底部*/
+.mlistfoot{
+	margin-top: 100px;
+	margin-left: 400px;
+}
+
+.mlistfoot span{
+	width: 140px;
+	height: 40px;
+}
+
+.mdetailcon td input{
+	border-color: transparent;
+	outline: none;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+/*保存animate*/
+.saveanimate{
+	display: none;
+	opacity: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -100px;
+	margin-top: -25px;
+	width: 200px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+}
+.saveanimate span{
+	width: 100%;
+	height: 100%;
+	font-weight: 700;
+    font-size: 32px;
+    color: #7AC23C;
+}
+
+/*______________生成工资条弹窗_______________*/
+.savemood{
+	display: none;
+	z-index: 1;
+	position: fixed;
+	width:100%;
+	height:100%;
+	background-color: rgba(204, 204, 204,0.6);
+}
+
+.savemlistbox{
+	text-align: center;
+	z-index: 1000;
+	color: #000;
+	position: absolute;
+	left:40%;
+	top:40%;
+	margin-left:-250px;
+	margin-top:-115px;
+	width:500px;
+	height:230px;
+	-border:1px solid #000;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.topbox{
+	width:100%;
+	height:60%;
+	margin: 20px;
+}
+.toptitle{
+	width: 100%;
+	height:20px;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight:700;
+	text-align: left;
+	float: left;
+}
+.linesolid{
+	width: 100%;
+	height:1px;
+	border-bottom:1px solid #000 ;
+}
+.botmbox{
+	width: 100%;
+	height: 39%;
+}
+.topbox .topcon1{
+	width: 90%;
+	height:20px;
+	line-height: 20px;
+	float: right;
+	text-align: left;
+	color: #FF6600;
+	font-size: 14px;
+	font-weight: 400;
+	overflow: hidden;
+}
+.topbox .topcon1:nth-child(2){
+	margin-top: 20px;
+}
+.topbox .chbox{
+	width: 94%;
+	height:20px;
+	text-align: left;
+	float: right;
+}
+.topbox .chboxtip{
+	widows: 50%;
+	color: #999;
+    font-size: 14px;
+    font-weight: 400;
+    float: left;
+    margin:20px 0 0 100px;
+}
+.botmbox .btn{
+	margin: 10px 10px 0 0;
+	float: right;
+}
+/*两种情景*/
+#tiptip{
+    color: #0099FF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

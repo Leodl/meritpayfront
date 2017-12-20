@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript" src="/assets/global/plugins/less/less.js"></script>
+
+    <link href="assets/global/css/font-opensans.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="/assets/global/plugins/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <link href="assets/global/plugins/bootstrap-sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/global/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+
+    <link href="assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="assets/global/plugins/bootstrap-summernote/summernote.css" rel="stylesheet"
+          type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="assets/global/plugins/bootstrap-fileinput/css/fileinput.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/global/plugins/select2/css/select2.min.css">
+    <link href="assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link id="ng_load_plugins_before"/>
+
+    <link href="assets/global/css/components-rounded.css" id="style_components" rel="stylesheet" type="text/css"/>
+    <link href="assets/global/css/plugins.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css"
+          id="style_color"/>
+    <link href="assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+
+
+<div ui-view="" class="ng-scope">
+    <div data-ng-include="'views/tpl/header.html'" data-ng-controller="HeaderController" class="page-header navbar navbar-fixed-top ng-scope">
+    <div class="page-header-inner ng-scope">
+        <!-- BEGIN LOGO -->
+        <div class="page-logo">
+
+            <div class="menu-toggler sidebar-toggler">
+                <span></span>
+            </div>
+
+        </div>
+        <div class="page-custom-title ng-binding" style="width:500px;">
+            南京贝贝云旋风多语幼儿园
+        </div>
+
+
+        <div class="top-menu">
+            <ul class="nav navbar-nav pull-right">
+                <!-- ngIf: gartenlist.length > 1 --><li class="dropdown dropdown-user ng-scope" ng-if="gartenlist.length > 1">
+                <a class="dropdown-toggle" dropdown-menu-hover="" data-toggle="dropdown" data-close-others="true">
+                    <div><i class="fa fa-exchange" style="color: #ffffff;font-size:18px;"></i><span class="kindergarten-switch"> 切换幼儿园 </span></div>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-default">
+                    <li ng-repeat="g in gartenlist" style="border-bottom:1px solid #e5e5e5" class="ng-scope">
+                    <a ng-click="toHome(this);">
+                        <div style="padding:8px;" class="ng-binding">南京贝贝云旋风多语幼儿园</div>
+                    </a>
+                   </li>
+                    <li ng-repeat="g in gartenlist" style="border-bottom:1px solid #e5e5e5" class="ng-scope">
+                    <a ng-click="toHome(this);">
+                        <div style="padding:8px;" class="ng-binding">同一个幼儿园</div>
+                    </a>
+                   </li>
+                </ul>
+
+            </li>
+
+                <li class="dropdown dropdown-user">
+                    <a href="#" class="dropdown-toggle" dropdown-menu-hover="" data-toggle="dropdown" data-close-others="true">
+                        <img class="img-circle" src="http://os4skw475.bkt.clouddn.com/bd6213a0c8de66ffe8c1e54bda0ecbad">
+                        <span class="username username-hide-on-mobile ng-binding"> 王八 </span>
+                        <i class="fa fa-angle-down" style="font-size:18px;"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-default">
+                        <li>
+                            <a ng-click="" style="padding:10px;">
+                                个人信息
+                            </a>
+                        </li>
+                        <li style="height:1px;overflow: hidden;background: #f1f3f6;"></li>
+                        <li>
+                            <a ng-click="showPassword();" style="padding:10px;">
+                                修改密码
+                            </a>
+                        </li>
+                        <li style="height:1px;overflow: hidden;background: #f1f3f6;"></li>
+                        <li>
+                            <a ng-click="logout();" style="padding:10px;">
+                                退出
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        <!-- END TOP NAVIGATION MENU -->
+    </div>
+    <div id="passwordModal" class="modal fade ng-scope" tabindex="-1" data-backdrop="static" data-keyboard="false">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+            <h4 class="modal-title text-center sbold">密码修改</h4>
+        </div>
+        <div class="modal-body form">
+            <form id="passworgradeTypedForm" class="form-horizontal ng-pristine ng-invalid ng-invalid-required" novalidate="novalidate">
+                <div class="form-body">
+                    <div class="form-group">
+                        <label class="control-label col-md-3">旧密码
+                            <span class="required" aria-required="true"> * </span>
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" name="password" ng-model="passwordInfo.password" onfocus="this.type='password'" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" utocomplete="off" required="" aria-required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">新密码
+                            <span class="required" aria-required="true"> * </span>
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="newpassword" name="newpassword" ng-model="passwordInfo.newpassword" onfocus="this.type='password'" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" utocomplete="off" required="" aria-required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">确认新密码
+                            <span class="required" aria-required="true"> * </span>
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" name="confirmpass" onfocus="this.type='password'" class="form-control" utocomplete="off" required="" aria-required="true">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <button type="submit" class="btn green" style="width:100px;">确定</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div></div>
+    <!-- END HEADER -->
+    <div class="clearfix ng-scope"></div>
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container ng-scope">
+        <!-- BEGIN SIDEBAR -->
+        <!-- ngInclude: 'views/tpl/sidebar.html' -->
+        <div data-ng-include="'views/tpl/sidebar.html'" data-ng-controller="SidebarController" class="page-sidebar-wrapper ng-scope"><div class="page-sidebar navbar-collapse collapse ng-scope">
+        <ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" ng-class="{'page-sidebar-menu-closed': settings.layout.pageSidebarClosed}">
+            <li class="start nav-item" style="margin-top:14px;">
+                <a href="#/app/home">
+                    <i class="icon-home"></i>
+                    <span class="title">首页</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-cutlery"></i>
+                    <span class="title">园所管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="">
+                        <a href="#/app/park/parkinfo">
+                            <span>园所信息</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#/app/park/functionset">
+                            <span>功能设置</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                            <span>组织架构</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-wrench"></i>
+                    <span class="title">班级管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="">
+                        <a href="#/app/class/classlist">
+                            班级信息
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#/app/class/archives">
+                            毕业档案
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item active">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-user"></i>
+                    <span class="title">账户管理</span>
+                    <span class="arrow"></span>
+                    <span class="selected"></span></a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="active">
+                        <a href="#/app/user/teacherlist">
+                            <span>老师账户</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#/app/user/studentlist">
+                            <span>宝贝账户</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!--绩效管理-->
+            <li class="nav-item " style="display: block">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-user"></i>
+                    <span class="title">绩效管理</span>
+                    <span class="arrow"></span>
+                    <span class="selected"></span></a>
+                <ul class="sub-menu" style="display: block;">
+                    <li class="active">
+                        <a href="#" onclick="iframe('client/newview/jxmanagement/jxsetting.html')">
+                            <span>绩效设置</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#" onclick="iframe('client/newview/jxmanagement/tmpmanagement.html')">
+                            <span>模板管理</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#" onclick="iframe('client/newview/jxmanagement/jxcheck.html')">
+                            <span>绩效考核</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#" onclick="iframe('client/newview/jxmanagement/myselfcomment.html')">
+                            <span>我的自评</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#" onclick="iframe('client/newview/jxmanagement/myPerf.html')">
+                            <span>我的绩效</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa icon-check"></i>
+                    <span class="title">通知中心</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="">
+                        <a href="#/app/notice/noticepark">
+                            <span>园所通知</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#/app/notice/noticeteacher">
+                            <span>老师通知</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#/app/notice/noticeclass">
+                            班级通知
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#/app/class/classshow">
+                    <i class="fa icon-refresh"></i>
+                    <span class="title">班级动态</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-refresh"></i>
+                    <span class="title">园所考勤</span>
+                    <span class="arrow "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="#/app/card/worktime">
+                            考勤设置
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/app/card/teacher">
+                            老师出勤
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/app/card/student">
+                            宝贝出勤
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/app/card/student/leave">
+                            宝贝请假
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/app/card/set">
+                            考勤机管理
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#/app/cookbook/cookbooklist">
+                    <i class="fa fa-coffee"></i>
+                    <span class="title">园所食谱</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-refresh"></i>
+                    <span class="title">家园共育</span>
+                    <span class="arrow "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="#/app/subject/subjecttask">
+                            专题共育
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/app/subject/subjectlist">
+                            专题库
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#/app/knowledge/teachingtask">
+                    <i class="fa fa-coffee"></i>
+                    <span class="title">园本教研</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-refresh"></i>
+                    <span class="title">智库</span>
+                    <span class="arrow "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="#/app/knowledge/knowledgelist">
+                            知识库
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/app/knowledge/articlelist">
+                            投稿管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/app/knowledge/discusslist">
+                            我的参与
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="http://127.0.0.1:8080/zhitong/client/index.html#/app/faq/faqlist">
+                    <i class="fa fa-coffee"></i>
+                    <span class="title">用户手册</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <div class="page-content" style="min-height: 857px;padding: 20px 0px 0px 0px;">
+
+                <!-- uiView: -->
+                <div ui-view="" class="fade-in-up ng-scope">
+
+                <!--此处 引入iframe--->
+
+                <div class="J_mainContent" id="content-main" style="display: block">
+                    <iframe style="display: inline;" class="J_iframe" name="iframe0" src="" data-id="index_0.html" frameborder="0" scrolling="auto" height="100%" width="100%";></iframe>
+
+                </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <!-- END CONTENT -->
+        <!-- BEGIN QUICK SIDEBAR -->
+        <a href="javascript:;" class="page-quick-sidebar-toggler">
+            <i class="icon-login"></i>
+        </a>
+
+    </div>
+    <!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+    <!-- ngInclude: 'views/tpl/footer.html' --><div data-ng-include="'views/tpl/footer.html'" data-ng-controller="FooterController" class="page-footer ng-scope"><div class="page-footer-inner ng-scope"> 2015 © Powered by <a href="http://www.babyun.cn/" title="Babyun.cn" target="_blank">Babyun.cn</a> </div>
+        <div class="scroll-to-top ng-scope" style="display: none;">
+            <i class="icon-arrow-up"></i>
+        </div></div>
+    <style class="ng-scope">
+
+        .teacher{
+            display:none;
+        }
+    </style></div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+<script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/global/plugins/plupload/plupload.full.min.js"></script>
+<script type="text/javascript" src="assets/global/plugins/qiniu/dist/qiniu.js"></script>
+<script src="assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"
+        type="text/javascript"></script>
+<script src="assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<!-- END CORE JQUERY PLUGINS -->
+<!-- BEGIN CORE ANGULARJS PLUGINS -->
+<script src="assets/global/plugins/angularjs/angular.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/angularjs/angular-sanitize.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/angularjs/angular-touch.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/angularjs/plugins/angular-ui-router.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/angularjs/plugins/ngStorage.min.js"></script>
+
+<script src="assets/global/plugins/angularjs/plugins/ocLazyLoad.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/angularjs/plugins/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
+
+<script src="assets/global/plugins/bootstrap-modal/js/bootstrap-modalmanager.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap-modal/js/bootstrap-modal.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap-sweetalert/sweetalert.min.js" type="text/javascript"></script>
+
+<script src="assets/global/plugins/moment.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"
+        type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"
+        type="text/javascript"></script>
+
+<script type="text/javascript" language="javascript"
+        src="assets/global/plugins/bootstrap-fileinput/js/fileinput.js"></script>
+<script type="text/javascript" language="javascript"
+        src="assets/global/plugins/bootstrap-fileinput/js/locales/zh.js"></script>
+<script type="text/javascript" language="javascript"
+        src="assets/global/plugins/select2/js/select2.full.min.js"></script>
+<script type="text/javascript" language="javascript"
+        src="assets/global/plugins/select2/js/i18n/zh-CN.js"></script>
+<script src="assets/global/plugins/template-web.js" type="text/javascript"></script>
+
+<script src="assets/global/plugins/bootstrap-summernote/summernote.js" type="text/javascript"></script>
+<script src="assets/global/plugins/datatables/js/dataTables.bootstrap.js" type="text/javascript"></script>
+<script src="assets/global/plugins/datatables/js/jquery.dataTables.js" type="text/javascript"></script>
+<script src="assets/global/plugins/datatables/js/dataTables.bootstrap.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/global/plugins/jquery-validation/js/localization/messages_zh.js"></script>
+<script src="assets/global/plugins/jquery.serializejson.min.js" type="text/javascript"></script>
+<!-- END CORE ANGULARJS PLUGINS -->
+<!-- BEGIN APP LEVEL ANGULARJS SCRIPTS -->
+<script src="js/main.js" type="text/javascript"></script>
+<script src="js/directives.js" type="text/javascript"></script>
+<!-- END APP LEVEL ANGULARJS SCRIPTS -->
+<!-- BEGIN APP LEVEL JQUERY SCRIPTS -->
+<script src="assets/global/scripts/app.js" type="text/javascript"></script>
+<script src="assets/layouts/layout/scripts/layout.js" type="text/javascript"></script>
+<script src="assets/global/scripts/constants.js" type="text/javascript"></script>
+<script src="assets/global/scripts/common.js" type="text/javascript"></script>
+
+<script>
+    $(function () {
+        $("#dl").click(function () {
+            $("#content-main").css("display","block")
+        })
+
+            $(".J_mainContent").height($(document).height()-60);
+
+    })
+
+
+    function iframe(src){
+        $(".J_iframe")[0].src = src;
+    }
+</script>
+
+
+
+</html>
+
+
+
+
+
+
+

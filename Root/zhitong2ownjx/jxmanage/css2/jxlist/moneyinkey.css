@@ -1,0 +1,77 @@
+
+.mbox{
+	position:relative;
+	width: 100%;
+	min-height: 857px;
+}
+
+.mloincon{
+	position: absolute;
+    left: 50%;
+    top: 20%;
+    margin-left: -164px;
+    margin-top: -131px;
+    width: 328px;
+	height: 194px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid;
+    border-color: rgba(121, 121, 121, 1);
+}
+
+.mloincon2{
+	margin: 10px;
+	text-align: center;
+}
+
+.mloincon2 h3:nth-child(1){
+	font-size: 18px;
+	color:#333;
+	font-weight: 700;
+}
+
+.mloincon2 span{
+	margin-right: 10px;
+}
+
+.mloincon2>div:nth-child(3){
+	font-weight: 300;
+} 
+
+.mloincon2 .mmagain{
+	width: 140px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

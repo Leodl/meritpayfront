@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>七牛云 - formdata 上传 demo</title>
+  <script src="../scripts/jquery.min.js"></script>
+  <script src="../scripts/formdata.js"></script>
+  <script>
+    var domain = "http://os4skw475.bkt.clouddn.com/"; // you bucket domain  eg: http://xxx.bkt.clouddn.com
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Formdata 上传 demo</div>
+
+    <!-- Document：https://developer.qiniu.com/kodo/manual/form-upload -->
+    <form id="testform" method="post" enctype="multipart/form-data">
+      <input name="key" id="key" type="hidden" value="">
+      <input name="token" type="hidden" value="OAUqNJ9DrF61XHCYclUPvD7HTo-65sBra_wL-klv:hBra6B4bbrVzxSgkeVjlV5xkLkQ=:eyJzY29wZSI6ImZvcmNoaWxkLXVzZXItZGV2IiwiZGVhZGxpbmUiOjE0OTkyMjMyMzl9">
+      <input id="userfile" name="file" type="file" />
+      <div style="height:100px;width:200px;background-color:black;"><input  name="testfile" type="file" />test</div>
+
+      <input name="accept" type="hidden" />
+    </form>
+    
+    <!-- add file -->
+    <label for="userfile">
+      <span></span>
+      <em>添加文件</em>
+    </label>
+
+    <!-- upload info -->
+    <div class="selected-file"></div>
+    <div class="progress"></div>
+    <div class="uploaded-result"></div>
+  </div>
+</body>
+</html>

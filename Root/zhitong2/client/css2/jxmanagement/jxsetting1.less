@@ -1,0 +1,229 @@
+#jxsetting-content{
+
+   .jxsetting-info{
+      ul{
+         li{
+            overflow: hidden;
+            .setcontents{
+               span{
+                  display: inline-block;
+                  margin-left: 10px;
+               }
+            }
+            p{
+             float: left;
+             font-size: 18px;
+              padding-right: 130px;
+               button{
+                  background: #ffffff;
+                  border: none;
+                  border: 1px solid #cccccc;
+                  width: 80px;
+                  height: 30px;
+                  border-radius: 30px;
+               }
+
+               .noset{
+                  font-size: 16px;
+                  display: inline-block;
+                  width: 130px;
+               }
+               .jxsetting-tip{
+                  color: #cccccc;
+                  font-size: 14px;
+               }
+               button{
+                  font-size: 16px;
+                  padding: 0px 10px;
+               }
+
+
+            }
+
+         }
+         .jxsetting-li{
+            position: relative;
+            .jxsetting-btn{
+               position: absolute;
+               top: 0px;
+               left: 243px;
+            }
+            p{
+               float: left;
+               font-size: 18px;
+               padding-right: 60px;
+
+               .jxsetting-groupbtn{
+                  border: 1px solid #c3c3c3;
+                  border-radius: 5px;
+                  width: 100px;
+                  display: none;
+                  margin-left: 20px;
+               }
+
+            }
+            .jxsetting-tip1{
+               color: #cccccc;
+               font-size: 14px;
+               display: block;
+            }
+            .jxsetting-tip2{
+               color: #cccccc;
+               font-size: 14px;
+               display: block;
+               margin-top: 5px;
+            }
+            .grouplistshow{
+               margin-left: 250px;
+
+            }
+            .grouptip{
+               color: red;
+               display: none;
+               h4{
+                  font-size: 16px;
+               }
+            }
+         }
+      }
+   }
+
+   #mask {
+      width: 100%;
+      height: 100%;
+      opacity: 0.4; /*��͸��*/
+      filter: alpha(opacity=40); /*ie 6��͸��*/
+      background-color: black;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: none;
+
+   }
+
+   #show{
+          width: 450px;
+          min-height: 300px;
+          background-color: #fff;
+          position: fixed;
+          left: 50%;
+          top: 50%;
+          margin: -250px 0 0 -250px;
+          display: none;
+
+          .jxsetting-close{
+             float: right;
+             margin: 5px 10px 0px 0px;
+             cursor: pointer;
+             font-size: 20px;
+             font-weight: 600;
+          }
+          .box-content{
+             min-height:300px;
+             overflow: hidden;
+             padding: 0px 10%;
+
+             .box-info{
+                margin-left: 50px;
+                ul{
+                   float: left !important;
+                }
+             }
+             p{
+                text-align: center;
+                font-size: 16px;
+                font-weight: 600;
+                color: #3c3c3c;
+             }
+             .jxsetting-left{
+                overflow: hidden;
+                li{
+                   float: left;
+                   width: 50%;
+
+                   span{
+                      color: #000000;
+                   }
+                }
+             }
+             .jxsetting-sub{
+                margin-top: 60px;
+             }
+          }
+
+       }
+
+   #show1{
+      min-width: 450px;
+      min-height: 300px;
+      background-color: #fff;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      margin: -250px 0 0 -250px;
+      display: none;
+
+      .jxsetting-close1{
+         float: right;
+         margin: 5px 10px 0px 0px;
+         cursor: pointer;
+         font-size: 20px;
+         font-weight: 600;
+      }
+      .box-content{
+         min-height:300px;
+         overflow: hidden;
+         padding: 0px 10%;
+         .box-info{
+            height: 100%;
+            width: 110%;
+            input[type='text']{
+               width: 100px;
+               font-size: 12px;
+               font-weight: normal;
+               margin-left: 5px;
+            }
+            a{
+               text-decoration: none;
+               color: #3c3c3c;
+               font-size: 20px;
+               margin-left: 20px;
+               position: absolute;
+               right: -25px;
+               top: -3px;
+            }
+         }
+
+
+         p{
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            color: #3c3c3c;
+         }
+         ul{
+            float: left;
+         }
+         .station{
+            margin-top: 30px;
+            li{
+               margin-bottom: 5px;
+            }
+         }
+         .groupnames{
+            position: relative;
+            li{
+               text-align: center;
+               margin-bottom: 5px;
+            }
+
+         }
+
+         .jxsetting-sub1{
+            margin-top: 60px;
+         }
+      }
+
+   }
+
+}

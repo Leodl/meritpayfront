@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--<link rel="stylesheet/less" href="../../../css/flowerbook.less">-->
+    <!--<script type="text/javascript" src="../../../assets/global/plugins/less/less.js"></script>-->
+
+    <link href="../../../assets/global/css/font-opensans.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet"
+          type="text/css"/>
+    <!--<link href="../../../assets/global/plugins/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css">-->
+
+    <link href="../../../assets/global/plugins/bootstrap-sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
+    <!--<link href="../../../assets/global/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css" rel="stylesheet"
+          type="text/css"/>-->
+    <link href="../../../assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+
+    <link href="../../../assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="../../../assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="../../../assets/global/plugins/bootstrap-summernote/summernote.css" rel="stylesheet"
+          type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="../../../assets/global/plugins/bootstrap-fileinput/css/fileinput.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../assets/global/plugins/select2/css/select2.min.css">
+    <link href="../../../assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link id="ng_load_plugins_before"/>
+
+    <link href="../../../assets/global/css/components-rounded.css" id="style_components" rel="stylesheet" type="text/css"/>
+    <link href="../../../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../assets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css"
+          id="style_color"/>
+    <link href="../../../assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css"/>
+    
+    <link rel="stylesheet" type="text/css" href="../../css2/acountstyle/eu2ck.css"/>
+</head>
+<style>
+    .page-bar {
+        background-color: #fff;
+        position: relative;
+        padding: 0 20px;
+        margin: -25px -20px 0;
+        border-bottom: 1px solid #e7ecf1;
+    }
+    html{
+        overflow-x:hidden;
+
+    }
+    BODY    {
+        SCROLLBAR-FACE-COLOR :  white ;
+        SCROLLBAR-HIGHLIGHT-COLOR :     white ;
+        SCROLLBAR-SHADOW-COLOR :     white ;
+        SCROLLBAR-3DLIGHT-COLOR :     white ;
+        SCROLLBAR-ARROW-COLOR :     white ;
+        SCROLLBAR-TRACK-COLOR :     white ;
+        SCROLLBAR-DARKSHADOW-COLOR :     white ;
+        SCROLLBAR-BASE-COLOR :     white;
+    }
+
+
+</style>
+
+<body style="background: #fff;overflow-x: hidden;">
+<div class="page-container ng-scope">
+	
+	<div id="ckmask"></div>
+	
+    <div class="page-content-wrapper" style="background: #ffffff;">
+        <div class="page-content1" style="min-height: 790px;padding: 25px 20px 10px">
+
+            <!--二级导航和内容开始部分-->
+            <div ui-view="" class="fade-in-up ng-scope">
+                <div class="page-bar ng-scope" style="margin-top: -10px">
+                    <ul class="page-breadcrumb">
+                        <li>
+                           	查看老师
+                        </li>
+                    </ul>
+                </div>
+
+                <!--绩效设置内容-->
+                <div class="row ng-scope">
+                    <div class="col-md-12 col-sm-12">
+    	
+        <!-- BEGIN PORTLET-->
+        <div class="portlet light bordered ">
+            <div class="portlet-title">
+                <div class="caption font-dark">
+                    <span class="bold" style="color:#00418f;">|</span>
+                    <span class="caption-subject font-dark bold uppercase">查看老师</span>
+                </div>
+                <div class="actions">
+                    <a class="btn gonone btn-primary">返回上一级</a>
+                </div>
+            </div>
+            <div  style="height: 100%;width: 100% ;" class="portlet-body form clearfix">
+	
+                <form id="teacherAddForm" class="form-horizontal">
+                    <input type="hidden" name="headpic" id="headpic"/>
+                    <div class="form-body">
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2">姓名
+                                <span class="required"> * </span>
+                            </label>
+                            <div class="col-md-4">
+
+                                <input type="text" class="form-control" name="username" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">手机号
+                                <span class="required"> * </span>
+                            </label>
+                            <div class="col-md-4">
+                                <input type="mobile" class="form-control" name="mobileno" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">性别
+                                <span class="required"> * </span>
+                            </label>
+                            <div class="col-md-4">
+                                <div class="form-control" name="gender" id="genderSelect">
+                                	<!--<option data-gender-id="1" value="男">男</option>
+                                	<option data-gender-id="2" value="女">女</option>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">考勤卡
+                            </label>
+                            <div class="col-md-4">
+                                <div class="form-control" id="cardnoSelect">
+                                	<!-- ............. -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">入职时间</label>
+                            <div class="col-md-4">
+                                <input id="entrytime" class="form-control" type="text" name="entrytime" />
+                            </div>
+                        </div>
+                        <!--岗位-->
+                        <div class="form-group">
+                            <label class="control-label col-md-2">角色</label>
+                            <div class="col-md-4">
+                                <div class="form-control" id="workSelect" name="work">
+                                	<!--..-->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="control-label col-md-2">出生时间</label>
+                            <div class="col-md-4">
+                                <input id="birthday" class="form-control" type="text" name="birthday" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">学历</label>
+                            <div class="col-md-4">
+                            	<!--{"1": "大专", "2": "本科", "3": "硕士", "4": "博士", "5": "博士后", "6": "其他"}-->
+                                <div class="form-control" id="degreeSelect" name="degree">
+                                	<!--..-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">教龄</label>
+                            <div class="col-md-4">
+                            	<!--{"1": "不足1年", "2": "1至3年", "3": "3至5年", "4": "5年以上"};-->
+                                <div class="form-control" id="schoolageSelect" name="schoolage">
+                                	<!--..-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">教师资格证</label>
+                            <div class="col-md-4">
+                                <div class="form-control" name="certificate" id="certificateSelect">
+                                	<!--..-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">特长</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" name="specialskill"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                            <div id="imgcon">
+                            	
+                            </div>
+                        </div>
+                        
+                    </div>
+                </form>
+</div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!--此处引入iframe--->
+
+        </div>
+    </div>
+
+</div>
+</body>
+
+<!--。。。-->
+<script src="../../../assets/global/plugins/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+<!--...-->
+<script src="../../../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../../assets/global/plugins/plupload/moxie.js"></script>
+<script type="text/javascript" src="../../../assets/global/plugins/plupload/plupload.full.min.js"></script>
+<script type="text/javascript" src="../../../assets/global/plugins/qiniu/dist/qiniu.js"></script>
+<script src="../../../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"
+        type="text/javascript"></script>
+<script src="../../../assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../../../assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="../../../assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<!-- END CORE JQUERY PLUGINS -->
+<!-- BEGIN CORE ANGULARJS PLUGINS -->
+<script src="../../../assets/global/plugins/angularjs/angular.min.js" type="text/javascript"></script>
+<script src="../../../assets/global/plugins/angularjs/angular-sanitize.min.js" type="text/javascript"></script>
+<script src="../../../assets/global/plugins/angularjs/angular-touch.min.js" type="text/javascript"></script>
+<script src="../../../assets/global/plugins/angularjs/plugins/angular-ui-router.min.js" type="text/javascript"></script>
+<script src="../../../assets/global/plugins/angularjs/plugins/ngStorage.min.js"></script>
+
+<script src="../../../assets/global/plugins/angularjs/plugins/ocLazyLoad.min.js" type="text/javascript"></script>
+<script src="../../../assets/global/plugins/angularjs/plugins/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
+
+<script src="../../../assets/global/plugins/bootstrap-modal/js/bootstrap-modalmanager.js" type="text/javascript"></script>
+<script src="../../../assets/global/plugins/bootstrap-modal/js/bootstrap-modal.js" type="text/javascript"></script>
+<script src="../../../assets/global/plugins/bootstrap-sweetalert/sweetalert.min.js" type="text/javascript"></script>
+
+<script src="../../../assets/global/plugins/moment.min.js" type="text/javascript"></script>
+<script src="../../../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"
+        type="text/javascript"></script>
+<script src="../../../assets/global/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"
+        type="text/javascript"></script>
+
+<script type="text/javascript" language="javascript"
+        src="../../../assets/global/plugins/bootstrap-fileinput/js/fileinput.js"></script>
+<script type="text/javascript" language="javascript"
+        src="../../../assets/global/plugins/bootstrap-fileinput/js/locales/zh.js"></script>
+<script type="text/javascript" language="javascript"
+        src="../../../assets/global/plugins/select2/js/select2.full.min.js"></script>
+<script type="text/javascript" language="javascript"
+        src="../../../assets/global/plugins/select2/js/i18n/zh-CN.js"></script>
+<script src="../../../assets/global/plugins/template-web.js" type="text/javascript"></script>
+
+<script src="../../../assets/global/plugins/bootstrap-summernote/summernote.js" type="text/javascript"></script>
+<!--<script src="../../../assets/global/plugins/datatables/js/dataTables.bootstrap.js" type="text/javascript"></script>-->
+<script src="../../../assets/global/plugins/datatables/js/jquery.dataTables.js" type="text/javascript"></script>
+<script src="../../../assets/global/plugins/datatables/js/dataTables.bootstrap.js" type="text/javascript"></script>
+<script src="../../../assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../../assets/global/plugins/jquery-validation/js/localization/messages_zh.js"></script>
+<script src="../../../assets/global/plugins/jquery.serializejson.min.js" type="text/javascript"></script>
+<!-- END CORE ANGULARJS PLUGINS -->
+<!-- BEGIN APP LEVEL ANGULARJS SCRIPTS -->
+<!--<script src="../../../js/main.js" type="text/javascript"></script>-->
+<!--<script src="../../../js/directives.js" type="text/javascript"></script>-->
+<!-- END APP LEVEL ANGULARJS SCRIPTS -->
+<!-- BEGIN APP LEVEL JQUERY SCRIPTS -->
+<script src="../../../assets/global/scripts/app.js" type="text/javascript"></script>
+<script src="../../../assets/layouts/layout/scripts/layout.js" type="text/javascript"></script>
+<script src="../../../assets/global/scripts/constants.js" type="text/javascript"></script>
+<script src="../../../assets/global/scripts/common.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="../../js2/acounthh/eu2ck.js"></script>
+
+
+</html>
+
+
+
+
+
+
+

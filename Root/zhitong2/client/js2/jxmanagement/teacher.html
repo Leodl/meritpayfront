@@ -1,0 +1,92 @@
+<div data-ng-include="'views/tpl/header_teacher.html'" data-ng-controller="HeaderTeacherController"
+     class="page-header navbar navbar-fixed-top"></div>
+<!-- END HEADER -->
+<div class="clearfix"></div>
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+    <!-- BEGIN SIDEBAR -->
+    <div data-ng-include="'views/tpl/sidebar_teacher.html'" data-ng-controller="SidebarController"
+         class="page-sidebar-wrapper"></div>
+    <!-- END SIDEBAR -->
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+
+            <div class="fade-in-up">
+                <div class="J_mainContent" id="content-main" style="display: none">
+                    <iframe style="display: inline;" class="J_iframe" name="iframe0" src=""  data-id="index_0.html" frameborder="0" scrolling="auto" height="100%" width="100%";></iframe>
+
+                </div>
+            </div>
+
+            <div ui-view class="fade-in-up remove"></div>
+        </div>
+    </div>
+    <!-- END CONTENT -->
+    <!-- BEGIN QUICK SIDEBAR -->
+    <a href="javascript:;" class="page-quick-sidebar-toggler">
+        <i class="icon-login"></i>
+    </a>
+
+</div>
+<!-- END CONTAINER -->
+<!-- BEGIN FOOTER -->
+<div data-ng-include="'views/tpl/footer.html'" data-ng-controller="FooterController" class="page-footer"></div>
+<style>
+    .garten{
+        display:none;
+    }
+
+
+</style>
+
+<script>
+
+    //��ȡ��ַ����ַ
+    function getUrlParam(key) {
+        // ��ȡ����
+        var url = window.location.search;
+        // ����ɸѡ��ַ��
+        var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+        // ƥ��Ŀ�����
+        var result = url.substr(1).match(reg);
+        //���ز���ֵ
+        return result ? decodeURIComponent(result[2]) : null;
+    }
+    var brandname = getUrlParam("teachernews");
+
+
+    function common(){
+        $(".remove").remove();
+        $("#content-main").css("display","block");
+        $(".page-content").css("padding","0px");
+        $(".J_mainContent").height($(document).height());
+    }
+
+    //var url = "http://forchild.zhitong.group"
+    //var url = "http://106.15.137.203";
+    //var url = "http://localhost:63342/gitcangku/meritpayfront"
+    
+    	 var host = window.location.host;
+         var test = window.location.protocol;
+         var url = test+"//"+host;
+
+    if(brandname=="teacher1"){
+        common();
+        $(".J_iframe")[0].src = ''+url+'/zhitong2/client/newview/jxmanagement/myselfcomment.html'
+    }
+    if(brandname=="teacher2"){
+        common();
+        $(".J_iframe")[0].src = ''+url+'/zhitong2/client/newview/jxmanagement/myPerf.html'
+    }
+    if(brandname=="teacher3"){
+         common();
+         $(".J_iframe")[0].src = ''+url+'/zhitong2/client/newview/jxmanagement/jxcheckteacher.html'
+    }
+      if(brandname=="teacher4"){
+        common();
+         $(".J_iframe")[0].src = ""+url+"/zhitong2/client/newview/moneyCon/moneylist.html"
+    }
+   
+  
+</script>

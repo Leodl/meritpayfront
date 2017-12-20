@@ -1,0 +1,40 @@
+body{
+	overflow-x: hidden;
+}
+.money1head{
+	font-size: 32px;
+}
+
+.passcon h5{
+	display: inline-block;
+	width:100px;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.passcon span{
+	display: inline-block;
+	width: 80px;
+	margin-right: 20px;
+	text-align: right;
+}
+.passcon p{
+	color:#333;
+	font-weight: 300;
+	height:30px
+}
+
+.passbtn{
+	position: absolute;
+	left:120px;
+}
+
+.xuline{
+	margin-top: 100px;
+}
+
+
+.passcon .passtip{
+	display: inline-block;
+}
+

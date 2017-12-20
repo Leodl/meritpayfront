@@ -1,0 +1,199 @@
+#jxsetting-content .jxsetting-info ul li {
+  overflow: hidden;
+}
+#jxsetting-content .jxsetting-info ul li .setcontents span {
+  display: inline-block;
+  margin-left: 10px;
+}
+#jxsetting-content .jxsetting-info ul li p {
+  float: left;
+  font-size: 18px;
+  padding-right: 130px;
+}
+#jxsetting-content .jxsetting-info ul li p button {
+  background: #ffffff;
+  border: none;
+  border: 1px solid #cccccc;
+  width: 80px;
+  height: 30px;
+  border-radius: 30px;
+}
+#jxsetting-content .jxsetting-info ul li p .noset {
+  font-size: 16px;
+  display: inline-block;
+  width: 130px;
+}
+#jxsetting-content .jxsetting-info ul li p .jxsetting-tip {
+  color: #cccccc;
+  font-size: 14px;
+}
+#jxsetting-content .jxsetting-info ul li p button {
+  font-size: 16px;
+  padding: 0px 10px;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li {
+  position: relative;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li .jxsetting-btn {
+  position: absolute;
+  top: 0px;
+  left: 243px;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li p {
+  float: left;
+  font-size: 18px;
+  padding-right: 60px;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li p .jxsetting-groupbtn {
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  width: 100px;
+  display: none;
+  margin-left: 20px;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li .jxsetting-tip1 {
+  color: #cccccc;
+  font-size: 14px;
+  display: block;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li .jxsetting-tip2 {
+  color: #cccccc;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li .grouplistshow {
+  margin-left: 250px;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li .grouptip {
+  color: red;
+  display: none;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li .grouptip h4 {
+  font-size: 16px;
+}
+#jxsetting-content #mask {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  /*��͸��*/
+  filter: alpha(opacity=40);
+  /*ie 6��͸��*/
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+#jxsetting-content #show {
+  width: 450px;
+  min-height: 300px;
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: -250px 0 0 -250px;
+  display: none;
+}
+#jxsetting-content #show .jxsetting-close {
+  float: right;
+  margin: 5px 10px 0px 0px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+}
+#jxsetting-content #show .box-content {
+  min-height: 300px;
+  overflow: hidden;
+  padding: 0px 10%;
+}
+#jxsetting-content #show .box-content .box-info {
+  margin-left: 50px;
+}
+#jxsetting-content #show .box-content p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3c3c3c;
+}
+#jxsetting-content #show .box-content .jxsetting-left {
+  overflow: hidden;
+}
+#jxsetting-content #show .box-content .jxsetting-left li {
+  float: left;
+  width: 50%;
+}
+#jxsetting-content #show .box-content .jxsetting-left li span {
+  color: #000000;
+}
+#jxsetting-content #show .box-content .jxsetting-sub {
+  margin-top: 60px;
+}
+#jxsetting-content #show1 {
+  min-width: 450px;
+  min-height: 300px;
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: -250px 0 0 -250px;
+  display: none;
+}
+#jxsetting-content #show1 .jxsetting-close1 {
+  float: right;
+  margin: 5px 10px 0px 0px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+}
+#jxsetting-content #show1 .box-content {
+  min-height: 300px;
+  overflow: hidden;
+  padding: 0px 10%;
+}
+#jxsetting-content #show1 .box-content .box-info {
+  height: 100%;
+  width: 110%;
+}
+#jxsetting-content #show1 .box-content .box-info input[type='text'] {
+  width: 100px;
+  font-size: 12px;
+  font-weight: normal;
+  margin-left: 5px;
+}
+#jxsetting-content #show1 .box-content .box-info a {
+  text-decoration: none;
+  color: #3c3c3c;
+  font-size: 20px;
+  margin-left: 20px;
+}
+#jxsetting-content #show1 .box-content p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3c3c3c;
+}
+#jxsetting-content #show1 .box-content .jxsetting-grop {
+  float: left;
+}
+#jxsetting-content #show1 .box-content .jxsetting-grop li {
+  position: relative;
+  height: 30px;
+}
+#jxsetting-content #show1 .box-content .jxsetting-grop li span {
+  color: #000000;
+}
+#jxsetting-content #show1 .box-content .jxsetting-grop li .jxsetting-radio {
+  position: relative;
+  top: -20px;
+  left: 90px;
+}
+#jxsetting-content #show1 .box-content .jxsetting-grop li .jxsetting-radio input[type='radio']:nth-child(2) {
+  margin-left: 90px;
+}
+#jxsetting-content #show1 .box-content .jxsetting-right {
+  float: right;
+}
+#jxsetting-content #show1 .box-content .jxsetting-sub1 {
+  margin-top: 60px;
+}

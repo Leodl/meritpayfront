@@ -1,0 +1,113 @@
+.caption {
+  width: 100%;
+}
+.caption a {
+  color: #337ab7;
+  font-size: 16px;
+  padding: 0px 5px;
+  height: 30px;
+  line-height: 30px;
+  float: right;
+  text-decoration: none !important;
+}
+#jxcheck-show .jxcheckshow-name {
+  overflow: hidden;
+}
+#jxcheck-show .jxcheckshow-name ul {
+  overflow: hidden;
+}
+#jxcheck-show .jxcheckshow-name ul li {
+  float: left;
+  margin-left: 20px;
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  font-size: 16px;
+  height: 30px;
+  padding: 2px 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#jxcheck-show .jxcheckshow-title p {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+#jxcheck-show .jxcheckshow-table {
+  margin: 0 auto;
+}
+#jxcheck-show .jxcheckshow-table table {
+  width: 100%;
+}
+#jxcheck-show .jxcheckshow-table table thead tr {
+  text-align: center;
+  height: 37px;
+  font-weight: 600;
+}
+#jxcheck-show .jxcheckshow-table table thead tr td {
+  border: 1px solid #e7ecf1;
+}
+#jxcheck-show .jxcheckshow-table table thead td:nth-child(1) {
+  min-width: 120px;
+}
+#jxcheck-show .jxcheckshow-table table thead td:nth-child(2) {
+  min-width: 470px;
+}
+#jxcheck-show .jxcheckshow-table table thead td:nth-child(3) {
+  min-width: 100px;
+}
+#jxcheck-show .jxcheckshow-table table thead td:nth-child(5) {
+  min-width: 100px;
+}
+#jxcheck-show .jxcheckshow-table table thead .selfcomment {
+  min-width: 100px;
+}
+#jxcheck-show .jxcheckshow-table table tbody tr {
+  border: 1px solid #e7ecf1;
+  border-radius: 5px;
+}
+#jxcheck-show .jxcheckshow-table table tbody tr td {
+  height: 45px;
+  text-align: center;
+  border: 1px solid #e7ecf1;
+  width: 80px;
+}
+#jxcheck-show .jxcheckshow-table table tbody tr td span {
+  display: block;
+}
+#jxcheck-show .jxcheckshow-table table tbody tr td input {
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #c2cad8;
+}
+#jxcheck-show .jxcheckshow-table table tbody tr .content {
+  padding-left: 5px;
+  text-align: left;
+}
+#jxcheck-show .total {
+  width: 96%;
+  overflow: hidden;
+}
+#jxcheck-show .total p {
+  float: right;
+  font-size: 18px;
+}
+#jxcheck-show .total p span {
+  margin-left: 5px;
+  color: #00a8c6;
+}
+#jxcheck-show .save {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: center;
+}
+#jxcheck-show .save button {
+  background: #004190;
+}
+.jxcheckshow-active {
+  background: #3399ff;
+  color: #ffffff;
+}

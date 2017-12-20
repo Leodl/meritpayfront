@@ -1,0 +1,145 @@
+<div data-ng-include="'views/tpl/header.html'" data-ng-controller="HeaderController"
+     class="page-header navbar navbar-fixed-top"></div>
+<!-- END HEADER -->
+<div class="clearfix"></div>
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+    <!-- BEGIN SIDEBAR -->
+    <div data-ng-include="'views/tpl/sidebar.html'" data-ng-controller="SidebarController"
+         class="page-sidebar-wrapper"></div>
+    <!-- END SIDEBAR -->
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+        
+             <div class="fade-in-up">
+             <div class="J_mainContent" id="content-main" style="display: none">
+                    <iframe style="display: inline;" class="J_iframe" name="iframe0" src=""  data-id="index_0.html" frameborder="0" scrolling="auto" height="100%" width="100%";></iframe>
+
+                </div>
+                </div>
+
+            <div ui-view class="fade-in-up remove"> 
+            
+           
+          
+            </div>
+        </div>
+        
+
+        
+    </div>
+    <!-- END CONTENT -->
+    <!-- BEGIN QUICK SIDEBAR -->
+    <a href="javascript:;" class="page-quick-sidebar-toggler">
+        <i class="icon-login"></i>
+    </a>
+
+</div>
+<!-- END CONTAINER -->
+<!-- BEGIN FOOTER -->
+<div data-ng-include="'views/tpl/footer.html'" data-ng-controller="FooterController" class="page-footer"></div>
+<style>
+
+    .teacher{
+        display:none;
+    }
+</style>
+
+<script>
+
+     //获取地址栏地址
+    function getUrlParam(key) {
+        // 获取参数
+        var url = window.location.search;
+        // 正则筛选地址栏
+        var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+        // 匹配目标参数
+        var result = url.substr(1).match(reg);
+        //返回参数值
+        return result ? decodeURIComponent(result[2]) : null;
+    }
+    var brandname = getUrlParam("news");
+    
+  
+     
+    function common(){
+        $(".remove").remove();
+         $("#content-main").css("display","block");
+         $(".page-content").css("padding","0px");
+         $(".J_mainContent").height($(document).height());
+    }
+
+//var url = "http://forchild.zhitong.group"
+//var url = "http://106.15.137.203";
+var host = window.location.host;
+var test = window.location.protocol;
+//console.log(host);//106.15.137.203
+//console.log(test);//http:
+var url = test+"//"+host;
+
+    if(brandname==0){
+         common();
+         $(".J_iframe")[0].src = ''+url+'/zhitong2/client/newview/zuzhi/org.html';
+    } 
+    if(brandname==1){
+         common();
+         $(".J_iframe")[0].src = ''+url+'/zhitong2/client/newview/jxmanagement/jxsetting.html'
+    } 
+    if(brandname==2){
+        common();
+         $(".J_iframe")[0].src = ''+url+'/zhitong2/client/newview/jxmanagement/tmpmanagement.html'
+    }
+    if(brandname==3){
+        common();
+         $(".J_iframe")[0].src = ''+url+'/zhitong2/client/newview/jxmanagement/jxcheckleader.html'
+    }
+    if(brandname==4){
+        common();
+         $(".J_iframe")[0].src = ''+url+'/zhitong2/client/newview/jxmanagement/myselfcomment.html'
+    }
+    if(brandname==5){
+        common();
+         $(".J_iframe")[0].src = ''+url+'/zhitong2/client/newview/jxmanagement/myPerf.html'
+    }
+    if(brandname==6){
+        common();
+         $(".J_iframe")[0].src = ''+url+'/zhitong2/client/newview/moneyCon/moneyset.html'
+    }
+    //sedtoken
+    if(brandname==61){
+        common();
+         $(".J_iframe")[0].src = ''+url+'/zhitong2/client/newview/moneyCon/moneylogin.html'
+    }
+    if(brandname==62){
+        common();
+         $(".J_iframe")[0].src = ''+url+'/zhitong2/client/newview/moneyCon/moneyinkey.html'
+    }
+    //
+    if(brandname==7){
+        common();
+         $(".J_iframe")[0].src = ''+url+'/zhitong2/client/newview/moneyCon/manyseting.html'
+    }
+    if(brandname==8){
+        common();
+         $(".J_iframe")[0].src = ""+url+"/zhitong2/client/newview/moneyCon/moneyshow.html"
+    }
+    if(brandname==9){
+        common();
+         $(".J_iframe")[0].src = ""+url+"/zhitong2/client/newview/moneyCon/moneylist.html"
+    }
+    if(brandname==10){
+        common();
+         $(".J_iframe")[0].src = ""+url+"/zhitong2/client/newview/passSet/passset.html"
+    }
+    //花名册
+    if(brandname==15){
+        common();
+         $(".J_iframe")[0].src = ""+url+"/zhitong2/client/newview/acounthh/eu2.html"
+    }
+    
+    
+      
+    
+</script>
+

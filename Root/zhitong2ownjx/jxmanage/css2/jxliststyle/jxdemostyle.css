@@ -1,0 +1,22 @@
+.fontwhite{
+	color:#fff!important;
+}
+.money1head{
+	font-size: 30px;
+}
+
+.classlist2,.classlist3{
+	width:150px;
+	margin-bottom: 20px;
+}
+.actions{
+	overflow: hidden;
+	width: 82%;
+}
+#addclassde{
+	float: right;
+}
+.jxdemo{
+	margin-bottom: 30px;
+	width: 100px;
+}

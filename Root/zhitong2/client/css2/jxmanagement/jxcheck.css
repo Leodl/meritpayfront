@@ -1,0 +1,46 @@
+#jxcheck-content ul h3 {
+  font-weight: 600;
+}
+#jxcheck-content ul li {
+  width: 930px;
+  height: 40px;
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 10px;
+  box-shadow: 0px 5px 5px #c3c3c3;
+}
+#jxcheck-content ul li p {
+  font-size: 16px;
+  text-align: center;
+  margin: 0px;
+  line-height: 40px;
+}
+#jxcheck-content ul li p a {
+  text-decoration: none;
+  color: #3c3c3c;
+  display: block;
+}
+#jxcheck-content ul li span,
+#jxcheck-content ul li i {
+  float: right;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #3399FF;
+}
+#jxcheck-content ul li i {
+  color: green;
+  font-size: 14px;
+}
+#jxcheck-content .jxcheck-Year h3 {
+  font-weight: 600;
+}
+#jxcheck-content .jxcheck-Year h3 i {
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.activeshow {
+  display: block;
+}

@@ -1,0 +1,446 @@
+ <div class="page-sidebar navbar-collapse collapse">
+    <ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" ng-class="{'page-sidebar-menu-closed': settings.layout.pageSidebarClosed}">
+
+        <li class="start nav-item" style="margin-top:14px;">
+            <a href="?#/app/home">
+                <i class="icon-home"></i>
+                <span class="title">首页</span>
+            </a>
+        </li>
+        <li class="nav-item org">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="fa fa-cutlery"></i>
+                <span class="title">园所管理</span>
+                <span class="arrow"></span>
+            </a>
+            <ul class="sub-menu park">
+                <li>
+                    <a href="?#/app/park/parkinfo">
+                        <span>园所信息</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="?#/app/park/functionset">
+                        <span>功能设置</span>
+                    </a>
+                </li>
+                 <li>
+                    <a href="?news=0">
+                        <span>组织架构</span>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="icon-wrench"></i>
+                <span class="title">班级管理</span>
+                <span class="arrow "></span>
+            </a>
+            <ul class="sub-menu class">
+                <li>
+                    <a href="?#/app/class/classlist">
+                        班级信息
+                    </a>
+                </li>
+                <li>
+                    <a href="?#/app/class/archives">
+                        毕业档案
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item ">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="fa fa-user"></i>
+                <span class="title">账户管理</span>
+                <span class="arrow"></span>
+            </a>
+            <ul class="sub-menu user" id="usercount">
+                <!--<li>
+                    <a href="?#/app/user/teacherlist">
+                        <span>老师账户</span>
+                    </a>
+                </li>-->
+                <li>
+                    <a href="?#/app/user/studentlist">
+                        <span>宝贝账户</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="?news=15">
+                        <span>花名册</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!--绩效管理-->
+        <li class="nav-item">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="fa fa-user"></i>
+                <span class="title">绩效管理</span>
+                <span class="arrow"></span>
+            </a>
+            <ul class="sub-menu jxmanagement">
+                <li>
+                    <a href="?news=1">
+                        <span>绩效设置</span>
+                    </a>
+                </li>
+                <li >
+                    <a href="?news=2">
+                        <span>模板管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="?news=3">
+                        <span>绩效考核</span>
+                    </a>
+                </li>
+                 <li class="isself">
+                    <a href="?news=4">
+                        <span>我的自评</span>
+                    </a>
+                </li>
+                <li class="ispublic">
+                    <a href="?news=5">
+                        <span>我的绩效</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!--财务管理-->
+        <li class="nav-item">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="fa fa-user"></i>
+                <span class="title">财务管理</span>
+                <span class="arrow"></span>
+            </a>
+            <ul class="sub-menu moneymanagement">
+                <li>
+                    <a data-id="6" class="getsedtoken">
+                        <span>岗位工资管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a data-id="7" class="getsedtoken">
+                        <span>工资设置</span>
+                    </a>
+                </li>
+                <li>
+                    <a data-id="8" class="getsedtoken">
+                        <span>工资表</span>
+                    </a>
+                </li>
+                <li class='moneylist'>
+                    <a data-id="9" class="getsedtoken">
+                        <span>工资条</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="?news=10">
+                        <span>密码管理</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!--绩效管理-->
+        
+        <li class="nav-item">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="fa icon-check"></i>
+                <span class="title">通知中心</span>
+                <span class="arrow"></span>
+            </a>
+            <ul class="sub-menu notice">
+                <li>
+                    <a href="?#/app/notice/noticepark">
+                        <span>园所通知</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="?#/app/notice/noticeteacher">
+                        <span>老师通知</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="?#/app/notice/noticeclass">
+                        班级通知
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="?#/app/class/classshow">
+                <i class="fa icon-refresh"></i>
+                <span class="title">班级动态</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="icon-refresh"></i>
+                <span class="title">园所考勤</span>
+                <span class="arrow "></span>
+            </a>
+            <ul class="sub-menu card">
+                <li>
+                    <a href="?#/app/card/worktime">
+                        考勤设置
+                    </a>
+                </li>
+                <li>
+                    <a href="?#/app/card/teacher">
+                        老师出勤
+                    </a>
+                </li>
+                <li>
+                    <a href="?#/app/card/student">
+                        宝贝出勤
+                    </a>
+                </li>
+                <li>
+                    <a href="?#/app/card/student/leave">
+                        宝贝请假
+                    </a>
+                </li>
+                <li>
+                    <a href="?#/app/card/set">
+                        考勤机管理
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="?#/app/cookbook/cookbooklist">
+                <i class="fa fa-coffee"></i>
+                <span class="title">园所食谱</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="icon-refresh"></i>
+                <span class="title">家园共育</span>
+                <span class="arrow "></span>
+            </a>
+            <ul class="sub-menu subject">
+                <li>
+                    <a href="?#/app/subject/subjecttask">
+                        专题共育
+                    </a>
+                </li>
+                <li>
+                    <a href="?#/app/subject/subjectlist">
+                        专题库
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="?#/app/knowledge/teachingtask">
+                <i class="fa fa-coffee"></i>
+                <span class="title">园本教研</span>
+            </a>
+        </li>
+       <!-- <li class="nav-item">
+            <a ui-sref="recipes/recipeslist">
+                <i class="fa fa-coffee"></i>
+                <span class="title">成长档案</span>
+            </a>
+        </li>-->
+        <li class="nav-item">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="icon-refresh"></i>
+                <span class="title">智库</span>
+                <span class="arrow "></span>
+            </a>
+            <ul class="sub-menu knowledge">
+                <li>
+                    <a href="?#/app/knowledge/knowledgelist">
+                        知识库
+                    </a>
+                </li>
+                <li>
+                    <a href="?#/app/knowledge/articlelist">
+                        投稿管理
+                    </a>
+                </li>
+                <li>
+                    <a href="?#/app/knowledge/discusslist">
+                        我的参与
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item" >
+            <a href="?#/app/faq/faqlist">
+                <i class="fa fa-coffee"></i>
+                <span class="title">用户手册</span>
+            </a>
+        </li>
+    </ul>
+</div>
+ <script>
+
+//点击工资设置
+var sessioninfo = sessionStorage.getItem("teacher");
+var data =  eval('(' + sessioninfo + ')');
+var userId = data.userid;
+var token = data.token;
+var gartenId = data.gartenid;
+
+var host = window.location.host;
+var test = window.location.protocol;
+//console.log(host);//106.15.137.203
+//console.log(test);//http:
+var url = test+"//"+host;
+var url2 = test+"//"+host; 
+$(".getsedtoken").click(function(){
+	
+	var getsedtoken = window.sessionStorage.getItem("sedtoken");
+	console.log(getsedtoken);
+	
+	var savedata = {
+	  "gartenId": parseInt(gartenId),
+	  "password": "123456",
+	  "userId":  parseInt( userId )
+	}
+	
+	savedata = JSON.stringify(savedata);
+	var that = $(this);
+	$.ajax({
+		type:"post",
+		url:""+url2+"/meritpay/secondpss/login",
+		async:false,
+		beforeSend: function(request) {
+	 		request.setRequestHeader("User-Token",token);
+	    },
+		contentType:"application/json",
+		data:savedata,
+		success:function(res){
+			
+			if(res.result==-2){
+				alert("没有设置安全密码");
+				that.attr("href","?news=61");
+				return false;
+			}
+			var thisid = that.attr("data-id");
+			//判断跳转
+			if(getsedtoken == undefined || getsedtoken == "undefined" || getsedtoken == null || getsedtoken == "null" || getsedtoken == false){
+				that.attr("href","?news=62");
+			}else{
+				that.attr("href","?news="+thisid);
+			}
+		}
+	});
+	
+})
+
+//获取地址栏地址
+ function getUrlParam(key) {
+     // 获取参数
+     var url = window.location.search;
+     // 正则筛选地址栏
+     var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+     // 匹配目标参数
+     var result = url.substr(1).match(reg);
+     //返回参数值
+     return result ? decodeURIComponent(result[2]) : null;
+ }
+ var brandname = getUrlParam("news");
+
+ $(".sub-menu").click(function(){
+     $(this).parent("li").siblings("li").find("ul").css("display","none");
+     $(this).css("display","block");
+ });
+ 
+
+ //是否显示节点
+ var sessioninfo = sessionStorage.getItem("teacher");
+        var data =  eval('(' + sessioninfo + ')');
+       // var userId = data.userid;
+        var token = data.token;
+        var gartenId = data.gartenid;
+        var userType = data.usertype;
+        if(userType!==1){
+            $(".isself").siblings("li").hide();
+            $(".moneylist").siblings("li").hide();
+            $(".moneylist").show();
+            $('.isself').show();
+        }
+ 
+        //var url = 'http://forchild.zhitong.group';
+        //var url = "http://106.15.137.203";
+        var host = window.location.host;
+		var test = window.location.protocol;
+		//console.log(host);//106.15.137.203
+		//console.log(test);//http:
+		var url = test+"//"+host;
+        
+  		$.ajax({
+            url:''+url+'/meritpay/achconfig/get',
+            type:'get',
+            headers:{"User-Token":token},
+            success:function(res){
+                console.log(res.data)
+                var isGroup = res.data[0].isGroup;
+                var isSelf = res.data[0].isSelf;
+                var isPublic = res.data[0].isPublic;
+                if(isSelf==1){
+                    $(".isself").hide();
+                }
+                if(isPublic==1){
+                    $(".ispublic").hide();
+                }
+            }
+        })
+        
+
+ if(brandname==0){
+         $(".org").css("display","block")
+     }  
+ if(brandname==1||brandname==2||brandname==3||brandname==4||brandname==5){
+     $(".jxmanagement").css("display","block")
+ }
+  if(brandname==6||brandname==7||brandname==8||brandname==9||brandname==10 ||brandname==61){
+     $(".moneymanagement").css("display","block")
+ }
+ if(brandname==11||brandname==12||brandname==13||brandname==14){
+     $(".ownmanagement").css("display","block")
+ } 
+ if(brandname==15){
+$("#usercount").css("display","block")
+ }
+ 
+ var url = window.location.hash;
+ var old = url.split("/")[2];
+
+ if(old=="park"){
+    $(".park").css("display","block");
+ }
+if(old=="class"){
+    $(".class").css("display","block");
+ } 
+if(old=="user"){
+    $(".user").css("display","block");
+ }
+if(old=="notice"){
+    $(".notice").css("display","block");
+ }
+if(old=="card"){
+    $(".card").css("display","block");
+ }
+if(old=="subject"){
+    $(".subject").css("display","block");
+ }
+if(old=="knowledge"){
+    $(".knowledge").css("display","block");
+ }
+ 
+//$("#getsedtoken").click(function(){
+//	alert()
+//})
+ 
+    
+</script>

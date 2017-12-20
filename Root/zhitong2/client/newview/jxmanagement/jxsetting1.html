@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript" src="../../../../../zhitong/assets/global/plugins/less/less.js"></script>
+    <link href="../../css2/jxmanagement/jxsetting1.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css2/base.css" rel="stylesheet" type="text/css"/>
+
+
+
+
+    <link href="../../../../../zhitong/assets/global/css/font-opensans.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../../../zhitong/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../../../zhitong/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../../../zhitong/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../../../zhitong/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="../../../../../zhitong/assets/global/plugins/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <link href="../../../../../zhitong/assets/global/plugins/bootstrap-sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../../../zhitong/assets/global/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="../../../../../zhitong/assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+
+    <link href="../../../../../zhitong/assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="../../../../../zhitong/assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="../../../../../zhitong/assets/global/plugins/bootstrap-summernote/summernote.css" rel="stylesheet"
+          type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="../../../../../zhitong/assets/global/plugins/bootstrap-fileinput/css/fileinput.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../zhitong/assets/global/plugins/select2/css/select2.min.css">
+    <link href="../../../../../zhitong/assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link id="ng_load_plugins_before"/>
+
+    <link href="../../../../../zhitong/assets/global/css/components-rounded.css" id="style_components" rel="stylesheet" type="text/css"/>
+    <link href="../../../../../zhitong/assets/global/css/plugins.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../../../zhitong/assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../../../zhitong/assets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css"
+          id="style_color"/>
+    <link href="../../../../../zhitong/assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css"/>
+
+    <style>
+        .page-bar {
+            background-color: #fff;
+            position: relative;
+            padding: 0 20px;
+            margin: -25px -20px 0;
+            border-bottom: 1px solid #e7ecf1;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body style="background-color: #ffffff;">
+
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container ng-scope">
+
+    <div class="page-content-wrapper" style="background: #ffffff;">
+        <div class="page-content1" style="min-height: 790px;padding: 25px 20px 10px">
+
+            <!--二级导航和内容开始部分-->
+            <div ui-view="" class="fade-in-up ng-scope">
+                <div class="page-bar ng-scope" style="margin-top:-10px">
+                    <ul class="page-breadcrumb">
+                        <li>
+                            绩效管理
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li>
+                            绩效设置
+                        </li>
+                    </ul>
+                </div>
+
+                <!--绩效设置内容-->
+                <div class="row ng-scope">
+                    <div class="col-md-12 col-sm-12">
+                        <!-- BEGIN PORTLET-->
+                        <div class="portlet light bordered ">
+                            <div class="portlet-title">
+                                <div class="caption font-dark">
+                                    <span class="bold font-blue-steel">|</span>
+                                    <span class="caption-subject font-dark bold uppercase">绩效设置</span>
+                                </div>
+                            </div>
+
+                            <div style="height: 100%;width: 100%" id="jxsetting-content" class="clearfix">
+                                <div class="jxsetting-info">
+                                    <ul>
+                                        <li>
+                                            <p>参与考核的岗位</p>
+
+                                            <p class="setcontents">
+
+                                            </p>
+
+                                            <p>
+                                                <button class="jxsetting-setbox" data-modal="modal-1">设置</button>
+                                            </p>
+
+                                        </li>
+                                        <li class="jxsetting-li">
+                                            <p>
+                                                考核分组<span class="jxsetting-tip">（岗位分组考核）</span>
+                                            </p>
+                                            <p class="jxsetting-showbtn" style="padding-right: 0px;z-index: 9999">
+                                                <input type="checkbox" class="make-switch" data-on-color="success" data-off-color="warning" data-size="small" >
+                                            </p>
+                                            <P>
+                                                <button class="jxsetting-groupbtn" style="display: none">管理分组</button>
+                                            </P>
+                                        </li>
+                                        <li class="jxsetting-li groupactive">
+                                            <div class="grouplistshow">
+                                                <!--<h4><span>1</span><em>:</em>-->
+                                                    <!--<span>w</span>-->
+                                                    <!--<span>w</span>-->
+                                                    <!--<span>w</span>-->
+
+                                                <!--</h4>-->
+                                                <!--<h4><span>1</span><em>:</em><span>w</span></h4>-->
+                                                <!--<h4><span>1</span><em>:</em><span>w</span></h4>-->
+
+
+                                            </div>
+                                            <h4 class="grouptip">请在模版管理中，为分组设置相应的考核模版，否则将无法进行考核</h4>
+
+                                        </li>
+
+                                        <li class="jxsetting-li">
+                                            <p>
+                                                绩效结果是否公开<span class="jxsetting-tip1">（被评人是否可见历史评分）</span>
+                                            </p>
+                                            <p class="jxsetting-checkbox">
+                                                <input type="checkbox" class="make-switch" data-on-color="success" data-off-color="warning" data-size="small" >
+                                            </p>
+                                        </li>
+                                        <li class="jxsetting-li">
+                                            <p>
+                                                绩效是否需要自评<span class="jxsetting-tip2">（开启后被评人需先完成自评，上级才能进行评分，自评分不参与考核计算）</span>
+                                            </p>
+                                            <p class="jxsetting-btn">
+                                                <input type="checkbox" class="make-switch" data-on-color="success" data-off-color="warning" data-size="small">
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--参与考核岗位弹出层设置弹出框-->
+
+                                <div id="mask"></div>
+                                <div id="show">
+                                    <span class="jxsetting-close">X</span> <!--关闭-->
+                                    <div class="box-content">
+                                        <div class="box-info clearfix">
+                                            <p>选择参与考核的岗位</p>
+                                            <div class="jxsetting-left">
+                                                <ul>
+
+
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                        <p>
+                                            <button class="btn btn-info jxsetting-sub">保存</button>
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!--管理分组弹出层-->
+                                <div id="show1">
+                                    <span class="jxsetting-close1">X</span> <!--关闭-->
+                                    <div class="box-content">
+                                        <div class="box-info clearfix">
+                                            <p>管理分组</p>
+                                            <ul class="station">
+                                                <!--<li>老师1</li>-->
+                                                <!--<li>老师2</li>-->
+                                                <!--<li>老师3</li>-->
+                                            </ul>
+                                            <ul class="groupnames">
+                                                <li><input achid="34" type="text" placeholder="分组名称"></li>
+                                                <div></div>
+                                                <!--<li><input staid="123" type="radio" name="radio0"></li>-->
+                                                <!--<li><input  staid="1235" type="radio" name="radio1"></li>-->
+                                                <!--<li><input staid="1236" type="radio" name="radio2"></li>-->
+
+                                            </ul>
+                                            <ul class="groupnames">
+                                                <li><input achid="12"  type="text" placeholder="分组名称"></li>
+                                                <a href="javascript:;" class="addgroup">+</a>
+                                                <div></div>
+                                                <!--<li><input staid="123" type="radio" name="radio0"></li>-->
+                                                <!--<li><input  staid="1235" type="radio" name="radio1"></li>-->
+                                                <!--<li><input staid="1236" type="radio" name="radio2"></li>-->
+
+                                            </ul>
+
+                                        </div>
+                                        <p>
+                                            <button class="btn btn-info jxsetting-sub1">确定</button>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <div class="jxsetting-save" style="text-align: center">
+                                    <button class="saveAll btn btn-info">保存</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+
+
+<script src="../../../../../zhitong/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../../../../zhitong/assets/global/plugins/plupload/plupload.full.min.js"></script>
+<script type="text/javascript" src="../../../../../zhitong/assets/global/plugins/qiniu/dist/qiniu.js"></script>
+<script src="../../../../../zhitong/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"
+        type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<!-- END CORE JQUERY PLUGINS -->
+<!-- BEGIN CORE ANGULARJS PLUGINS -->
+<script src="../../../../../zhitong/assets/global/plugins/angularjs/angular.min.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/angularjs/angular-sanitize.min.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/angularjs/angular-touch.min.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/angularjs/plugins/angular-ui-router.min.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/angularjs/plugins/ngStorage.min.js"></script>
+
+<script src="../../../../../zhitong/assets/global/plugins/angularjs/plugins/ocLazyLoad.min.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/angularjs/plugins/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
+
+<script src="../../../../../zhitong/assets/global/plugins/bootstrap-modal/js/bootstrap-modalmanager.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/bootstrap-modal/js/bootstrap-modal.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/bootstrap-sweetalert/sweetalert.min.js" type="text/javascript"></script>
+
+<script src="../../../../../zhitong/assets/global/plugins/moment.min.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"
+        type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"
+        type="text/javascript"></script>
+
+<script type="text/javascript" language="javascript"
+        src="../../../../../zhitong/assets/global/plugins/bootstrap-fileinput/js/fileinput.js"></script>
+<script type="text/javascript" language="javascript"
+        src="../../../../../zhitong/assets/global/plugins/bootstrap-fileinput/js/locales/zh.js"></script>
+<script type="text/javascript" language="javascript"
+        src="../../../../../zhitong/assets/global/plugins/select2/js/select2.full.min.js"></script>
+<script type="text/javascript" language="javascript"
+        src="../../../../../zhitong/assets/global/plugins/select2/js/i18n/zh-CN.js"></script>
+<script src="../../../../../zhitong/assets/global/plugins/template-web.js" type="text/javascript"></script>
+
+<script src="../../../../../zhitong/assets/global/plugins/bootstrap-summernote/summernote.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/datatables/js/dataTables.bootstrap.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/datatables/js/jquery.dataTables.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/datatables/js/dataTables.bootstrap.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="../assets/global/plugins/jquery-validation/js/localization/messages_zh.js"></script>
+<script src="../../../../../zhitong/assets/global/plugins/jquery.serializejson.min.js" type="text/javascript"></script>
+<!-- END CORE ANGULARJS PLUGINS -->
+<!-- BEGIN APP LEVEL ANGULARJS SCRIPTS -->
+<script src="js/main.js" type="text/javascript"></script>
+<script src="js/directives.js" type="text/javascript"></script>
+<!-- END APP LEVEL ANGULARJS SCRIPTS -->
+<!-- BEGIN APP LEVEL JQUERY SCRIPTS -->
+<script src="../../../../../zhitong/assets/global/scripts/app.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/layouts/layout/scripts/layout.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/scripts/constants.js" type="text/javascript"></script>
+<script src="../../../../../zhitong/assets/global/scripts/common.js" type="text/javascript"></script>
+<script src="../../js2/jxmanagement/jxsetting.js" type="text/javascript"></script>
+
+
+
+<!--<script src="../../js2/classie.js" type="text/javascript"></script>
+<script src="../../js2/modalEffects.js" type="text/javascript"></script>-->
+
+
+<script>
+    $(function(){
+//        $(".jxsetting-groupbtn").click(function(){
+//
+//            var len = $(".setcontents span").length;
+//            var html = "";
+//            var stationidarr = [];
+//            var stationnamearr = [];
+//            for(var i = 0;i<len;i++){
+//                stationidarr.push($(".setcontents span:eq("+i+")").attr("staid"));
+//                stationnamearr.push($(".setcontents span:eq("+i+")").text());
+//                html +="<li class='num"+i+"' staid='"+stationidarr[i]+"'>"+stationnamearr[i]+"</li>";
+//            }
+//            $(".station").html(html);
+//
+//            var len1 = $(".groupnames").length;
+//            for(var i=0;i<len1;i++){
+//                var len2 =$(".station li").length;
+//                var html = ""
+//                for(var j = 0 ;j<len2;j++){
+//                     html +="<li><input class='num"+j+"' staid='"+stationidarr[j]+"' type='radio' name='radio"+j+"'></li>";
+//                }
+//                $(".box-info .groupnames:eq("+i+") div").html(html)
+//            }
+//
+//
+//
+//            $("#show1,#mask").show();
+//        })
+
+
+
+
+//        $(".jxsetting-sub1").click(function(){
+//            var len1 = $(".box-info .groupnames").length;
+//            console.log(len1)
+//            var stationGroup = {};
+//            var stationGroupname = {};
+////
+//            var configgrouparr = [];
+//            var configarr = [];
+//            for(var i = 0 ;i<len1;i++){
+//                var configgroup = {};
+//                var name = $.trim($(".groupnames:eq("+i+")").find("li").first("li").find("input").val());
+//                var stainarr = [];
+//                var gwnamearr = [];
+//
+//                var d = $(".box-info .groupnames:eq("+i+") li").find("input").first("input").attr("achid")
+//                configarr.push(d)
+//
+//
+//                var len3 = $(".station li").length;
+//                for(var j = 0;j<len3;j++){
+//                    var a =  $(".box-info .groupnames:eq("+i+")").find(".num"+j+":checked").attr("staid");
+//                    var b =  $(".box-info .groupnames:eq("+i+")").find(".num"+j+":checked").attr("class");
+//                    var c = $(".station ."+b+"").text();
+//
+//                    if(a !==undefined){
+//                        stainarr.push(a)
+//                    }
+//                    if(c !==""){
+//                        gwnamearr.push(c)
+//                    }
+//
+//                }
+//                stationGroup[name] = stainarr;
+//                stationGroupname[name] = gwnamearr;
+//
+//                configgroup[configarr[i]] = stainarr;
+//                configgrouparr.push(configgroup)
+//            }
+//
+//
+//            //如果有空的删除
+//            for(var k in stationGroup){
+//                if(stationGroup[k].length==0){
+//                    delete stationGroup[k];
+//                }
+//            }
+//            //如果有空的删除
+//            for(var k in stationGroupname){
+//                if(stationGroupname[k].length==0){
+//                    delete stationGroupname[k];
+//                }
+//            }
+//            console.log(configgrouparr.length)
+//
+//            for(var i =0;i<len1;i++){
+//                for(var k in configgrouparr[i]){
+//                    if(configgrouparr[i][k].length==0){
+//                        delete configgrouparr[i][k];
+//                        configgrouparr.splice(i,1)
+//                        console.log(i)
+//                    }
+//                }
+//            }
+//
+//            console.log(stationGroupname)
+//            console.log(stationGroup)
+//            console.log(configgrouparr)
+//
+//            //显示页面
+//            var html = "";
+//            var  i = -1
+//            for(var k in stationGroupname ){
+//                i++;
+//                html +="<h4><span>"+k+"</span><em class='num"+i+"'>:</em></h4>";
+//            }
+//            $(".grouplistshow").html(html)
+//
+//            var z = -1;
+//            for(var k in stationGroupname ){
+//                z++
+//                var html1 = "";
+//                var len = stationGroupname[k].length;
+//                for(var j = 0;j<len;j++){
+//                    html1 += "<a class='gwid"+j+"' style='margin-left: 10px;color:black;text-decoration: none'>"+stationGroupname[k][j]+"</a>";
+//                }
+//                $(".grouplistshow .num"+z+"").after(html1);
+//            }
+//
+//
+//            //绑定id
+//           var len3 = $(".grouplistshow h4").length;
+//            for(var i =0;i<len3;i++){
+//                var z = -1
+//                for(var k in configgrouparr[i] ){
+//                    z++;
+//                  $(".grouplistshow h4:eq("+i+") span").attr("configid",k);
+//                    var len4 = configgrouparr[i][k].length;
+//                    for(var j = 0;j<len4;j++){
+//                        $(".grouplistshow h4:eq("+i+")").find(".gwid"+j+"").attr("id",configgrouparr[i][k][j])
+//
+//                    }
+//                }
+//            }
+//
+//        })
+
+
+//        $(".box-info").on("click",".addgroup",function(){
+//            $(".addgroup").remove();
+//            var html="<ul style='float:left' class='groupnames'><li><input type='text'></li><a href='javascript:;' class='addgroup'>+</a></ul>"
+//            $(".box-info .groupnames").last(".groupnames").after(html);
+//            console.log(html)
+//            console.log($(".groupnames").length)
+//
+//            var staidsarr = [];
+//            var len = $(".station li").length;
+//            for(var i = 0;i<len;i++){
+//               staidsarr.push($(".station li:eq("+i+")").attr("staid"))
+//            }
+//            var html1 = ""
+//            for(var i = 0;i<len;i++){
+//                html1 +="<li><input class='num"+i+"' type='radio' name='radio"+i+"' staid='"+staidsarr[i]+"'></li>"
+//            }
+//
+//            $(".box-info").find(".groupnames").last(".groupnames").append(html1)
+//
+//        })
+
+
+
+
+
+
+        $(".jxsetting-close1").click(function(){
+            $("#show1,#mask").hide();
+        })
+    })
+
+
+</script>
+
+
+
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+.fontwhite{
+	color:#fff!important;
+}
+.money1head{
+	font-size: 30px;
+}
+
+.classlist2,.classlist3{
+	width:150px;
+	margin-bottom: 20px;
+}
+.actions{
+	overflow: hidden;
+	width: 99%;
+}
+#addclassde{
+	float: right;
+	background: #004190;
+}
+.jxdemo{
+	margin-bottom: 30px;
+	width: 100px;
+}
+.sel{
+	width: 100px;
+	margin-bottom: 20px;
+	border: 1px solid #c2cad8;
+	border-radius: 5px;
+	height: 30px;
+	padding-left: 25px;
+}

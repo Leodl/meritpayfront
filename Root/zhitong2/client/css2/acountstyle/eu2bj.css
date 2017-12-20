@@ -1,0 +1,12 @@
+#imgcon{
+	position: absolute;
+	right: 500px;
+	top:100px;
+	width:200px;
+	height:170px;
+	border:1px solid #ccc;
+}
+#imgcon img{
+	width:200px;
+	height:170px;
+}

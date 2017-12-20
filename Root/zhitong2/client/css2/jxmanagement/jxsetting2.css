@@ -1,0 +1,150 @@
+#jxsetting-content .jxcheck-setting {
+  width: 70%;
+}
+#jxsetting-content .jxcheck-setting h4 {
+  background: #f4f4f4;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+#jxsetting-content .jxcheck-setting h4 span {
+  color: #3c3c3c;
+  line-height: 35px;
+}
+#jxsetting-content .jxcheck-setting h4 .shouqi {
+  background: url("../../images/shouqi.png");
+  background-repeat: no-repeat;
+  float: right;
+  background-size: 80% 80%;
+  background-position-y: center;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+#jxsetting-content .jxcheck-setting ul li {
+  position: relative;
+  text-align: center;
+  margin-bottom: 25px;
+}
+#jxsetting-content .jxcheck-setting ul li p {
+  display: inline-block;
+  margin: 0px;
+  text-align: center;
+  width: 100px;
+}
+#jxsetting-content .jxcheck-setting ul li span {
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 12%;
+}
+#jxsetting-content .jxcheck-setting ul li span:nth-child(1) {
+  padding-left: 0px;
+}
+#jxsetting-content .jxcheck-setting ul li .topname {
+  margin-left: -26px;
+}
+#jxsetting-content .jxcheck-setting ul li .byname {
+  font-size: 16px;
+}
+#jxsetting-content .jxcheck-setting ul li select {
+  margin-left: 15%;
+}
+#jxsetting-content .jxcheck-setting .jxsetting-save {
+  text-align: center;
+  margin-top: 60px;
+}
+#jxsetting-content .jxcheck-setting .jxsetting-save .saveAll {
+  background: #004190;
+}
+#jxsetting-content .jxsetting-info {
+  width: 70%;
+}
+#jxsetting-content .jxsetting-info h4 {
+  background: #f4f4f4;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+#jxsetting-content .jxsetting-info h4 span {
+  color: #3c3c3c;
+}
+#jxsetting-content .jxsetting-info h4 span:nth-child(2) {
+  float: right;
+  line-height: 35px;
+}
+#jxsetting-content .jxsetting-info ul li {
+  overflow: hidden;
+}
+#jxsetting-content .jxsetting-info ul li .setcontents span {
+  display: inline-block;
+  margin-left: 10px;
+}
+#jxsetting-content .jxsetting-info ul li p {
+  float: left;
+  font-size: 18px;
+  padding-right: 130px;
+}
+#jxsetting-content .jxsetting-info ul li p button {
+  background: #ffffff;
+  border: none;
+  border: 1px solid #cccccc;
+  width: 80px;
+  height: 30px;
+  border-radius: 30px;
+}
+#jxsetting-content .jxsetting-info ul li p .noset {
+  font-size: 16px;
+  display: inline-block;
+  width: 130px;
+}
+#jxsetting-content .jxsetting-info ul li p .jxsetting-tip {
+  color: #cccccc;
+  font-size: 14px;
+}
+#jxsetting-content .jxsetting-info ul li p button {
+  font-size: 16px;
+  padding: 0px 10px;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li {
+  position: relative;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li .jxsetting-btn {
+  position: absolute;
+  top: 0px;
+  left: 243px;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li p {
+  float: left;
+  font-size: 18px;
+  padding-right: 60px;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li p .jxsetting-groupbtn {
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  width: 100px;
+  display: none;
+  margin-left: 20px;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li .jxsetting-tip1 {
+  color: #cccccc;
+  font-size: 14px;
+  display: block;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li .jxsetting-tip2 {
+  color: #cccccc;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li .grouplistshow {
+  margin-left: 250px;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li .grouptip {
+  color: red;
+  display: none;
+}
+#jxsetting-content .jxsetting-info ul .jxsetting-li .grouptip h4 {
+  font-size: 16px;
+}

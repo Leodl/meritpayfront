@@ -1,0 +1,37 @@
+.money1head{
+	font-size: 30px;
+}
+.boxcon{
+	font-size: 18px;
+	font-weight: 600;
+}
+
+/*.box{
+	width: 100px;
+	height:30px;
+	text-align: center;
+	line-height: 30px;
+	border:1px solid #333;
+	border-color: #ccc;
+	display: inline-block;
+}*/
+
+.inpu1{
+	width:30%;
+	text-align: center;
+}
+.inpu2{
+	text-align: center;
+}
+.moneydetecon{
+	text-align: center;
+}
+
+.moneydetecon p {
+	font-size: 18px;
+	font-weight: 700;
+}
+#detestart{
+	text-align: center;
+	margin:10px 0 20px 10px;
+}

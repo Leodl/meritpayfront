@@ -1,0 +1,21 @@
+#ckmask{
+	position: fixed;
+	width:90%;
+	height:100%;
+	z-index: 1000;
+}
+.actions,.gonone{
+	z-index:1001;
+}
+#imgcon{
+	position: absolute;
+	right: 500px;
+	top:100px;
+	width:200px;
+	height:170px;
+	border:1px solid #ccc;
+}
+#imgcon img{
+	width:200px;
+	height:170px;
+}

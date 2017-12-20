@@ -1,0 +1,238 @@
+.edittmp-active {
+  background: #3399ff;
+  color: #ffffff;
+}
+.edittmp-active a {
+  color: #ffffff;
+}
+.looktmp-tip {
+  float: right;
+}
+.looktmp-tip a {
+  text-decoration: none;
+  color: #3c3c3c;
+  font-size: 14px;
+  border: 1px solid #3c3c3c;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+#looktmp {
+  margin-left: 85px;
+}
+#looktmp .edittmp-top {
+  width: 780px;
+  height: 60px;
+  position: relative;
+}
+#looktmp .edittmp-top p {
+  margin: 0px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 60px;
+  color: #3c3c3c;
+}
+#looktmp .edittmp-top P:nth-child(2) {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+#looktmp .edittmp-top P:nth-child(2) a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #3c3c3c;
+  border-radius: 5px;
+  border: 1px solid #3c3c3c;
+  padding: 5px 10px;
+}
+#looktmp .edittmp-table {
+  margin: 0 auto;
+}
+#looktmp .edittmp-table table {
+  width: 70%;
+}
+#looktmp .edittmp-table table thead {
+  /* td:nth-child(2){
+            min-width: 470px;
+          }*/
+}
+#looktmp .edittmp-table table thead tr {
+  text-align: center;
+  height: 40px;
+  font-weight: 600;
+}
+#looktmp .edittmp-table table thead tr td {
+  border: 1px solid #C3C3C3;
+}
+#looktmp .edittmp-table table thead td:nth-child(1) {
+  width: 170px;
+}
+#looktmp .edittmp-table table thead td:nth-child(3) {
+  min-width: 100px;
+}
+#looktmp .edittmp-table table tbody tr {
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+}
+#looktmp .edittmp-table table tbody tr td {
+  height: 45px;
+  text-align: center;
+  border: 1px solid #c3c3c3;
+}
+#looktmp .edittmp-table table tbody tr td i {
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+}
+#looktmp .edittmp-table table tbody tr td a {
+  text-decoration: none;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  border: 1px solid #c3c3c3;
+  color: #3c3c3c;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+#looktmp .edittmp-table table tbody tr td input {
+  width: 70px;
+  height: 25px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+#looktmp .edittmp-table table tbody tr td .edittmp-per {
+  position: relative;
+}
+#looktmp .edittmp-table table tbody tr td .edittmp-per span {
+  font-size: 16px;
+  position: absolute;
+  top: 2px;
+  right: 20px;
+}
+#looktmp .edittmp-table table tbody tr td textarea {
+  width: 70%;
+  padding: 0px 10px;
+}
+#looktmp .edittmp-table table tbody tr td button {
+  background: #3399ff;
+  color: #ffffff;
+  float: right;
+  border: none;
+  padding: 5px;
+  margin-left: 5px;
+  line-height: 25px;
+}
+#looktmp .edittmp-table .additem {
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  border: 1px solid #C3C3C3;
+  border-radius: 5px;
+}
+#looktmp .edittmp-foot {
+  width: 70%;
+  margin-top: 30px;
+  text-align: center;
+}
+#looktmp .edittmp-total {
+  overflow: hidden;
+  width: 70%;
+  margin-bottom: 20px;
+  padding: 0px 20px;
+}
+#looktmp .edittmp-total p:nth-child(1) {
+  float: left;
+  font-size: 16px;
+}
+#looktmp .edittmp-total p:nth-child(2) {
+  float: right;
+  font-size: 16px;
+}
+#looktmp .edittmp-total span {
+  margin-left: 10px;
+  color: #3399ff;
+}
+#looktmp #mask {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+#looktmp #show {
+  min-width: 600px;
+  min-height: 400px;
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: -200px 0 0 -300px;
+  display: none;
+}
+#looktmp #show .edittmp-close {
+  float: right;
+  padding-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#looktmp #show .edittmp-title {
+  width: 100%;
+  margin-top: 30px;
+}
+#looktmp #show .edittmp-title P {
+  margin: 0px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+#looktmp #show .edittmp-content {
+  overflow: hidden;
+}
+#looktmp #show .edittmp-content .left {
+  float: left;
+}
+#looktmp #show .edittmp-content .left ul li {
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  width: 70px;
+  height: 50px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  text-align: center;
+}
+#looktmp #show .edittmp-content .left ul li a {
+  text-decoration: none;
+  line-height: 50px;
+  font-size: 16px;
+  display: block;
+}
+#looktmp #show .edittmp-content .right {
+  float: left;
+  margin-left: 20px;
+  border: 1px solid #c3c3c3;
+  overflow: auto;
+  padding: 5px;
+  height: 300px;
+  min-width: 480px;
+}
+#looktmp #show .edittmp-content .right ul li {
+  height: 20px;
+  cursor: pointer;
+  padding-bottom: 15px;
+}
+#looktmp #show .edittmp-content .right ul li span {
+  display: block;
+}
+#looktmp #show .edittmp-select {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0px;
+}

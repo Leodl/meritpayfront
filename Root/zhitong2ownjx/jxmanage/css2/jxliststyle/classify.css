@@ -1,0 +1,77 @@
+.fontwhite{
+	color:#fff!important;
+}
+.money1head{
+	font-size: 30px;
+}
+/*添加按钮*/
+#addclassfy{
+	width: 96px;
+	height:26px;
+}
+
+/*弹窗*/
+#classfybox,#classbjbox{
+	display: none;
+	z-index: 1;
+	position: fixed;
+	width:100%;
+	height:100%;
+	background-color: rgba(204, 204, 204,0.6);
+}
+
+.moodbox{
+	text-align: center;
+	z-index: 1000;
+	color: #000;
+	position: absolute;
+	left:50%;
+	top:20%;
+	margin-left:-125px;
+	margin-top:-70px;
+	width:355px;
+	height:140px;
+	-border:1px solid #000;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.moodbox div{
+	width:100%;
+	height:100%;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.moodbox p{
+	margin: 0;
+	margin-left: 10%;
+	width:79%;
+	font-size: 20px;
+	text-align: center;
+	float: left;
+}
+
+.moodbox span{
+	cursor: pointer;
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 700;
+	text-align:center;
+	line-height: 20px;
+	width:10%;
+	height:20px;
+	float: right;
+}
+
+#addcV,#bjcV{
+	width: 80%;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.tipbtn{
+	display: inline-block;
+	text-align: center;
+	margin-top: 20px;
+	width:20%;
+	height:30px;
+}

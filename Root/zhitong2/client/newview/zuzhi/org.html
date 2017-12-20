@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <link rel="icon" type="image/x-icon" href="img/logo.ico">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery.orgchart.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <style type="text/css">
+
+	ul,li{
+		margin: 0;
+		padding: 0;
+		clear:both;
+	}
+      .pepleselect{
+        line-height: 25px;
+      }
+      .pepleshowdiv{
+        width: 100px;
+        height: 50px;
+        background: pink;
+        z-index: 999;
+      }
+       #mask {
+	       	-display: none;
+            width: 100%;
+            height: 100%;
+            -opacity: 0.4; /*半透明*/
+            -filter: alpha(opacity=40); /*ie 6半透明*/
+            background-color: transparent;
+            position: fixed;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            z-index: -999;
+        }
+
+        #showname {
+        	-display: none;
+        	-overflow-y: auto;
+            min-width: 200px;
+            min-height: 250px;
+            background-color: #fff;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -150px 0 0 -150px;
+            opacity: 0;
+            z-index: -999;
+            border: 1px solid #333;
+            border-radius: 10px;
+        }
+        #showname ul{
+			overflow-y: auto;
+			min-height: 250px;
+        }
+        #showname ul,#showname li{
+         list-style: none;
+        }
+        .ensure{
+          text-align: center;
+          margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        #showname .close{
+            display: block;
+            float: right;
+            margin-bottom: 10px;
+            margin-right: 8px;
+            margin-top: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+		
+		.fa {
+			display: none;			
+		}
+		p{
+			margin: 5px 0;
+		}
+    </style>
+
+</head>
+<body style="position: relative;">
+  <div id="chart-container"></div>
+  <div id="edit-panel" class="view-state">
+    <span id="chart-state-panel" class="radio-panel">
+      <!-- <input type="radio" name="chart-state" id="rd-view" value="view" checked="true"><label for="rd-view">查看</label> -->
+      <input type="radio" name="chart-state" id="rd-edit" value="edit" style="margin: 0;" onclick= "if(this.c==1){this.c=0;this.checked=0}else{this.c=1}"   c="0"><label for="rd-edit">编辑</label>
+    </span>
+    <label class="selected-node-group">选择岗位:</label>
+    <input type="text" id="selected-node" class="selected-node-group">
+    <label>新增岗位:</label>
+    <ul id="new-nodelist">
+      <li>
+      	<input type="text" class="new-node">
+      </li>
+    </ul>
+    <i class="fa fa-plus-circle btn-inputs" id="btn-add-input"></i>
+    <i class="fa fa-minus-circle btn-inputs" id="btn-remove-input"></i>
+    <span id="node-type-panel" class="radio-panel">
+      <!--<input type="radio" name="node-type" id="rd-parent" value="parent"><label for="rd-parent">上级</label>-->
+      <input type="radio" name="node-type" id="rd-child" value="children"><label for="rd-child">下级</label>
+      <input type="radio" name="node-type" id="rd-sibling" value="siblings"><label for="rd-sibling">同级</label>
+    </span>
+    <button type="button" id="btn-add-nodes">增加</button>
+    <button type="button" id="btn-delete-nodes">删除</button>
+    <!--<button type="button" id="btn-reset">重置</button>-->
+    <button type="button" id="btn-save">保存</button>
+  </div>
+
+
+  <!--人员管理弹出层-->
+  <div id="mask"></div>
+<div id="showname">
+    <span class="close">X</span>
+<ul>
+	<!--...-->
+</ul>
+  <div class="ensure">
+  <button btn btn-primary>确定</button>
+  </div>
+</div>
+
+
+
+
+  
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/html2canvas.min.js"></script>
+  <script type="text/javascript" src="js/jquery.orgchart.js"></script>
+  <script type="text/javascript" src="scripts.js"></script>
+
+
+<script>
+  $(function(){
+  	var sessioninfo = sessionStorage.getItem("teacher");
+	var data =  eval('(' + sessioninfo + ')');
+	var token = data.token;
+	var gartenId = data.gartenid;
+	var idL = $(".node").length;
+	savelist();
+function savelist(){
+	var obj ={};
+	
+	obj.requests=[];
+	
+	for( var k = 0; k<idL;k++ ){
+		var sonobj = {};
+		sonobj.gartenId = gartenId;
+		sonobj.parentId = $(".node")[k].getAttribute("pid");
+		sonobj.stationsId = $(".node")[k].getAttribute("data-id");
+		sonobj.stationsLevel = $(".node")[k].getAttribute("level-id");
+		sonobj.stationsName = $(".node")[k].firstChild.innerText;
+		sonobj.users = [];
+		var pL = $(".node")[k].getElementsByTagName("p").length;
+		for ( var n=0 ; n<pL ; n++) {
+			var pobj = {};
+			pobj.gartenid = gartenId;
+			pobj.rosterId = $(".node")[k].getElementsByTagName("p")[n].getAttribute("data-username-id");
+			sonobj.users.push(pobj);
+		}
+		obj.requests.push(sonobj);
+		
+	}
+	
+	//console.log(obj)
+	posobj = JSON.stringify(obj);
+	//console.log(posobj)
+}	
+
+   });
+
+
+
+
+
+
+</script>
+  </body>
+</html>
