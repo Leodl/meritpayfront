@@ -5,10 +5,7 @@
 
 $(function(){
     var jxobj = {};
-    // var url = 'http://forchild.zhitong.group';
-    var host = window.location.host;
-    var test = window.location.protocol;
-    //var url = test+"//"+host;
+    var url = Constants.ROOT_URLJX
 
 
     //获取session

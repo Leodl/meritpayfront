@@ -1,11 +1,6 @@
 $(function () {
 
-   //var url = 'http://forchild.zhitong.group';
-    var url = 'http://106.15.137.203';
-
-    var host = window.location.host;
-    var test = window.location.protocol;
-    //var url = test+"//"+host;
+    var url = Constants.ROOT_URLJX
 
     //获取地址栏地址
     function getUrlParam(key) {

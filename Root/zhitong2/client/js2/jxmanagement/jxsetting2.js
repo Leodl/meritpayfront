@@ -7,10 +7,7 @@ $(function(){
     //var token = data.token;
     //var gartenId =data.gartenid;
     var gartenId =5;
-    var url = 'http://106.15.137.203';
-    var host = window.location.host;
-    var test = window.location.protocol;
-    //var url = test+"//"+host;
+    var url = Constants.ROOT_URLJX
     var token ="eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MTI1NDg0MTYsInVzZXJJZCI6MTAwMywidXNlclR5cGUiOjEsInVzZXJOYW1lIjoi5ZC05aSn5Li9In0.-ewx0nluvNflyX93FuvHOT0eUbvBi47PWGTHzqxUGiM"
 
 

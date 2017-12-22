@@ -1,7 +1,5 @@
 $(function(){
-    var host = window.location.host;
-    var test = window.location.protocol;
-    //var url = test+"//"+host;
+    var url = Constants.ROOT_URLJX
 
     //var url = 'http://forchild.zhitong.group';
     //获取地址栏地址
@@ -28,7 +26,6 @@ $(function(){
      var userId = 100186;
      var name = "老师"
 
-    var url = 'http://106.15.137.203';
     var token ="eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MTM0MDg0NzgsInVzZXJJZCI6MTAwMywidXNlclR5cGUiOjEsInVzZXJOYW1lIjoi5ZC05aSn5Li9In0.F41vN3fneSAVU6fcDQA1c25xvgC9pwokpvlHWwohi-0"
 
 
@@ -129,7 +126,7 @@ $.ajax({
                         }
 //Safari
                         else if(explorer.indexOf("Safari") >= 0){
-
+                            $("#table1 .num"+i+"").find("tr").first("tr").find("td").attr("rowspan",1000)
                         }
 //Netscape
 

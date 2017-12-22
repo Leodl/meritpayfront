@@ -430,6 +430,9 @@ $(function() {
                             success: function(res) {
                                 if (res.result == 0) {
                                     Common.alertSuccess(res.message)
+                                    setTimeout(function(){
+                                        window.history.go(-1)
+                                    },800)
                                 } else {
                                     Common.alertError(res.message)
                                 }

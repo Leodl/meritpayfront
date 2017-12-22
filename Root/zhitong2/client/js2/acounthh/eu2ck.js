@@ -9,12 +9,14 @@ var data =  eval('(' + sessioninfo + ')');
 var token = data.token;
 
 var gartenId = data.gartenid;
-//var token = "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MDg1NzY5NjIsInVzZXJJZCI6MTAwNSwidXNlclR5cGUiOjEsInVzZXJOYW1lIjoi572X5a-G5qynIn0.QcZzpG1xhaqRk3dHADS5acKSXZnG2VPntSipvc2mlgs";
-//var url = "http://forchild.zhitong.group";
-var url = "http://106.15.137.203";
+
+var host = window.location.host;
+var test = window.location.protocol;
+var url = test+"//"+host;
 var userid = parseInt( GetQueryString("userId") );//1021
-var usercard =  GetQueryString("usercard") ;
-console.log(usercard)
+var usercard = GetQueryString("usercard");
+var stationsId = GetQueryString("stationsId");
+
 var dimissionstatus = null;
 
 //返回上一级
@@ -22,7 +24,46 @@ $(".gonone").click(function(){
 	history.go(-1)
 })
 
-var domain = 'http://os4skw475.bkt.clouddn.com';
+if(url == "http://106.15.137.203"){
+	////////////////////测试域名
+	var domain = 'http://os4skw475.bkt.clouddn.com';
+}else if( url == "http://forchild.zhitong.group" ){
+	//正式
+	var domain = 'http://oxpfj3y0x.bkt.clouddn.com';
+}else if( url == "http://test.zhitong.group" ){
+	////////////////////测试域名
+	var domain = 'http://os4skw475.bkt.clouddn.com';
+}else{
+	////////////////////测试域名
+	var domain = 'http://os4skw475.bkt.clouddn.com';
+}
+
+//岗位查询
+var valcon = "";
+$.ajax({
+	type:"get",
+	url:""+url+"/meritpay/stations/get/"+gartenId,
+	async:false,
+	beforeSend: function(request) {
+	 	request.setRequestHeader("User-Token",token);
+	},
+	success:function(res){
+		console.log(res);
+		//console.log( res.data )
+		var data = res.data;
+		var aaaa = JSON.stringify(data);
+		console.log(JSON.parse(aaaa));
+		var workcon ="";
+		var dataL = data.length;
+		for ( var k = 1;k<dataL;k++ ) {
+			if(stationsId == res.data[k].stationsId){
+				valcon = res.data[k].stationsName;
+			}
+		}
+		//console.log(workcon);
+		$("#workname").html(valcon);
+	}
+});
 //var gartenId = 5;
 var headpic2 = null;
 
@@ -50,22 +91,13 @@ $.ajax({
 		
 		$("#genderSelect").html(gendersex)
 		
-	
 		//cardstr +=usercard;
-		$("#cardnoSelect").html(usercard);
+		//$("#cardnoSelect").html(usercard);
 		
 		$("#entrytime")[0].value = res.data.entrytime;
-		
-		if( res.data.role == 1 ){
-			var rolename = "园长"
-		}else if( res.data.role == 2 ){
-			var rolename = "教师"
-		}else if( res.data.role == 3 ){
-			var rolename = "教工"
-		}else{
-			var rolename = " "
+		if( res.data.entrytime == false || res.data.entrytime==undefined || res.data.entrytime==null||res.data.entrytime=="undefined" ){
+			$("#entrytime")[0].value = " "
 		}
-		$("#workSelect").html(rolename)
 
 		
 		if( res.data.degree == 1 ){
@@ -85,7 +117,6 @@ $.ajax({
 		}
 		$("#degreeSelect").html(degreenamme)
 
-		
 		if( res.data.certificate == 1 ){
 			var certificateCon = "不足1年"
 		}else if( res.data.certificate == 2 ){
@@ -101,7 +132,13 @@ $.ajax({
 
 		
 		$("#birthday")[0].value = res.data.birthday;
+		if(res.data.birthday == false || res.data.birthday==undefined || res.data.birthday==null||res.data.birthday=="undefined"){
+			$("#birthday")[0].value = " ";
+		}
 		$("input[name='specialskill']")[0].value = res.data.specialskill;
+		if(res.data.specialskill == false||res.data.specialskill==undefined||res.data.specialskill==null|| res.data.specialskill=="null" ||res.data.specialskill=="undefined"){
+			$("input[name='specialskill']")[0].value = " "
+		}
 		
 		if( res.data.schoolage == 1 ){
 			var schoolageState = "有"
@@ -111,12 +148,6 @@ $.ajax({
 			var schoolageState = " "
 		}
 		$("#schoolageSelect").html(schoolageState)
-//		var schoolagel = $("#schoolageSelect").find("option").length;
-//		for ( var e = 0;e<certificatel;e++ ) {
-//			if( res.data.schoolage == $("#schoolageSelect").find("option")[e].getAttribute("data-schoolage-id") ){
-//				$("#schoolageSelect").find("option")[e].setAttribute("selected","selected");
-//			}
-//		}
 		
 		$("#imgcon").html("<img src='"+domain+"/"+res.data.headpic+"' alt=''>")
 		
@@ -136,10 +167,6 @@ function GetQueryString(name){
 	}
 	return null;
 }
-
-
-
-
 
 ////ready end
 })

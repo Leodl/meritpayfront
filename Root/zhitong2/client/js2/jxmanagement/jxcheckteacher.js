@@ -4,11 +4,8 @@
 $(function(){
     var jxobj = {};
 
-    var host = window.location.host;
-    var test = window.location.protocol;
-    //var url = test+"//"+host;
-    // var url = 'http://forchild.zhitong.group';
-    var url = 'http://106.15.137.203';
+    var url = Constants.ROOT_URLJX
+
     var token ="eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MTYyMzcwNDksInVzZXJJZCI6MTAwMTc4LCJ1c2VyVHlwZSI6MSwidXNlck5hbWUiOiLpmYjlsI_mnpcifQ._xkWVROSTMzLhtGWhI5DTj5blUx_GeJp0-PCEqZr7Ag"
 
     //获取session

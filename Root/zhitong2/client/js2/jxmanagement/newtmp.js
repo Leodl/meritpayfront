@@ -1,9 +1,6 @@
 $(function () {
 
-    var host = window.location.host;
-    var test = window.location.protocol;
-   // var url = test+"//"+host;
-    //var url = 'http://forchild.zhitong.group';
+    var url = Constants.ROOT_URLJX
 
     //获取session
     var sessioninfo = sessionStorage.getItem("teacher");
@@ -12,7 +9,7 @@ $(function () {
     var gartenId = 4;
     //var token = data.token;
 
-    var url = 'http://106.15.137.203';
+
     var token ="eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MTA0NDkwMDIsInVzZXJJZCI6MTAwNSwidXNlclR5cGUiOjEsInVzZXJOYW1lIjoi572X5a-G5qynIn0.SFizSY4da2qyU_HQlx92jFCgMHockT9JJpD6nnoiTZA"
 
 

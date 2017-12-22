@@ -1,10 +1,7 @@
    $(function(){
 
-       var host = window.location.host;
-       var test = window.location.protocol;
-       //var url = test+"//"+host;
-       // var url = 'http://forchild.zhitong.group';
-       var url = 'http://106.15.137.203';
+       var url = Constants.ROOT_URLJX
+
        var token ="eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MTM0MDg0NzgsInVzZXJJZCI6MTAwMywidXNlclR5cGUiOjEsInVzZXJOYW1lIjoi5ZC05aSn5Li9In0.F41vN3fneSAVU6fcDQA1c25xvgC9pwokpvlHWwohi-0"
 
        //获取session
